@@ -1,0 +1,154 @@
+name: volumeter
+description: "An Application for detecting Objects from Images and estimating Volumes"
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' 
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number is used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+# In Windows, build-name is used as the major, minor, and patch parts
+# of the product and file versions while build-number is used as the build suffix.
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.7.0
+
+# Dependencies specify other packages that your package needs in order to work.
+# To automatically upgrade your package dependencies to the latest versions
+# consider running `flutter pub upgrade --major-versions`. Alternatively,
+# dependencies can be manually updated by changing the version numbers below to
+# the latest version available on pub.dev. To see which dependencies have newer
+# versions available, run `flutter pub outdated`.
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.8
+  # Used for desktop applications
+  fluent_ui: ^4.11.2
+  # Using go router for navigation system and page routing
+  go_router: ^14.8.1
+  # Flutter_launcher_icons is very useafull for generating the launching icons for al the various platforms
+  # the application can run on as Windows, Linux, MacOS, Android, Fuchsia, IOS, and Web
+  flutter_launcher_icons: ^0.14.3
+  # This package is managing the native splash screen used on Android, IOS, and Web
+  flutter_native_splash: ^2.4.5
+  # Used as warper for generating internalizations class from .arb files
+  intl: ^0.19.0
+  # Volumeter uses Riverpod for state management
+  flutter_riverpod: ^2.6.1
+  # Some packages that are warpers for Linux, Windows and MacOS, that provides usefull
+  # configurations for the window
+  flutter_acrylic: ^1.1.4
+  window_manager: ^0.4.3
+  freezed_annotation: ^3.0.0
+  json_annotation: ^4.9.0
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  path_provider: ^2.1.5
+  flutter_advanced_drawer: ^1.4.0
+  iconify_flutter_plus: ^1.0.4
+  dropdown_button2: ^2.3.9
+  flutter_animate: ^4.5.2
+  flutter_reorderable_grid_view: ^5.5.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # The "flutter_lints" package below contains a set of recommended lints to
+  # encourage good coding practices. The lint set provided by the package is
+  # activated in the `analysis_options.yaml` file located at the root of your
+  # package. See that file for information about deactivating specific lint
+  # rules and activating additional ones.
+  flutter_lints: ^5.0.0
+  build_runner: ^2.4.15
+  freezed: ^3.0.3
+  json_serializable: ^6.9.4
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter packages.
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  assets:
+   - assets/icons/flags/
+   - assets/icons/launcher/
+
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/to/asset-from-package
+
+  fonts:
+   - family: Exo 2
+     fonts:
+       - asset: assets/fonts/Exo_2/Exo2-VariableFont_wght.ttf
+       - asset: assets/fonts/Exo_2/Exo2-Italic-VariableFont_wght.ttf
+         style: italic
+   - family: Fira Sans
+     fonts:
+       - asset: assets/fonts/Fira_Sans/FiraSans-Italic.ttf
+         style: italic
+       - asset: assets/fonts/Fira_Sans/FiraSans-Regular.ttf
+       - asset: assets/fonts/Fira_Sans/FiraSans-SemiBold.ttf
+         weight: 500
+       - asset: assets/fonts/Fira_Sans/FiraSans-Bold.ttf
+         weight: 700
+   - family: Inter
+     fonts:
+      - asset: assets/fonts/Inter/Inter-VariableFont_opsz.ttf
+      - asset: assets/fonts/Inter/Inter-Italic-VariableFont_opsz.ttf
+        style: italic
+   - family: Lato
+     fonts:
+      - asset: assets/fonts/Lato/Lato-Regular.ttf
+      - asset: assets/fonts/Lato/Lato-Bold.ttf
+        weight: 700
+      - asset: assets/fonts/Lato/Lato-Italic.ttf
+        style: italic
+   - family: Merriweather
+     fonts:
+      - asset: assets/fonts/Merriweather/Merriweather-VariableFont_opsz,wdth,wght.ttf
+      - asset: assets/fonts/Merriweather/Merriweather-Italic-VariableFont_opsz,wdth,wght.ttf
+        style: italic
+   - family: Open Sans
+     fonts:
+      - asset: assets\fonts\Open_Sans\OpenSans-VariableFont_wdth,wght.ttf
+      - asset: assets\fonts\Open_Sans\OpenSans-Italic-VariableFont_wdth,wght.ttf
+        style: italic
+   - family: Raleway
+     fonts:
+      - asset: assets\fonts\Raleway\Raleway-VariableFont_wght.ttf
+      - asset: assets\fonts\Raleway\Raleway-Italic-VariableFont_wght.ttf
+        style: italic
+   - family: Roboto
+     fonts:
+      - asset: assets\fonts\Roboto\Roboto-VariableFont_wdth,wght.ttf
+      - asset: assets\fonts\Roboto\Roboto-Italic-VariableFont_wdth,wght.ttf
+        style: italic
+   - family: Source Sans 3
+     fonts:
+      - asset: assets\fonts\Source_Sans_3\SourceSans3-VariableFont_wght.ttf
+      - asset: assets\fonts\Source_Sans_3\SourceSans3-Italic-VariableFont_wght.ttf
+        style: italic
+   - family: Source Serif 4
+     fonts:
+      - asset: assets\fonts\Source_Serif_4\SourceSerif4-VariableFont_opsz,wght.ttf
+      - asset: assets\fonts\Source_Serif_4\SourceSerif4-Italic-VariableFont_opsz,wght.ttf
+        style: italic
+    

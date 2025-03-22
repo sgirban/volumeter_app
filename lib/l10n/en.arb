@@ -1,0 +1,143 @@
+{
+    "@@locale": "en",
+    "@@author": "VoluMeter",
+    "@@comment": "English internalization files",
+    "@@context": "This is the file used for generating the interalizations",
+    "@@last_modified": "03.03.2025",
+    "about": "About",
+    "@about": {
+        "description": "About as text for setting item"
+    },
+    "aboutDesc": "App metadata & support",
+    "@aboutDesc": {
+        "description": "About as text for setting item"
+    },
+    "advanced": "Advanced",
+    "@advanced": {
+        "description": "It is used in context of setting item category. Here are main majority of application configurations"
+    },
+    "advancedDesc": "Power-user optimizations",
+    "@advancedDesc": {
+        "description": "It is used in context of setting item category. Here are main majority of application configurations"
+    },
+    "appearance": "Appearance",
+    "@appearance": {
+        "description": "Appearance and personalization. Used in settings page context"
+    },
+    "appearanceandpers": "Appearance & Personalizations",
+    "@appearanceandpers": {
+        "description": "Appearance and personalization. Used in settings page context"
+    },
+    "appearanceDesc": "Interface customization",
+    "@appearanceDesc": {},
+    "back": "Back",
+    "@back": {
+        "description": "Used as tooltip for button that goes to previous action or undo an action"
+    },
+    "confirmClose": "Confirm close",
+    "@confirmClose": {
+        "description": "The title of confirm close dialog"
+    },
+    "confirmCloseMessage": "Are  you sure you want to leave the app?",
+    "@confirmCloseMessage": {
+        "description": "Explicit detailed message for close app dialog"
+    },
+    "data": "Data",
+    "@data": {
+        "description": "The word is used as for settings category item"
+    },
+    "dataandstor": "Data & Storage",
+    "@dataandstor": {
+        "description": "Data and storage as category in the settings items"
+    },
+    "dataDesc": "Storage & prvacy controls",
+    "@dataDesc": {
+        "description": "The word is used as for settings category item"
+    },
+    "distractionFreeMode": "Distraction-Free Reading",
+    "@distractionFreeMode": {
+        "description": "Used in Appearance font and typography section"
+    },
+    "distractionFreeModeDesc": "Reduces the long paragraphs with short summary",
+    "@distractionFreeModeDesc": {},
+    "home": "Home",
+    "@home": {
+        "description": "The title used for home page. The main page where user lands when opens the app"
+    },
+    "languageAndRegion": "Language & Region",
+    "@languageAndRegion": {
+        "description": "Used as appearance settings section group title"
+    },
+    "languageInterface": "Interface Language",
+    "@languageInterface": {
+        "description": "The setting item title used for changing the language"
+    },
+    "languageInterfaceDesc": "Which language do you prefer?",
+    "@languageInterfaceDesc": {
+        "description": "The setting item description used for changing the language"
+    },
+    "layout": "Layout",
+    "@layout": {
+        "description": "The usual layout used both in interface and design"
+    },
+    "layoutEnableTheme": "Enable quick theme switch button",
+    "@layoutEnableTheme": {},
+    "layoutEnableThemeInfo": "When this is enabled a button for changing the themes quickly is displayed in the window bar",
+    "@layoutEnableThemeInfo": {},
+    "layoutEnableLang": "Enable quick language switch button",
+    "@layoutEnableLang": {},
+    "layoutEnableLangInfo": "When this is enabled a button for changing the language quickly is displayed in the window bar",
+    "@layoutEnableLangInfo": {},
+    "models": "Models",
+    "@models": {
+        "description": "Models used as word for settings category"
+    },
+    "modelsDesc": "Models management",
+    "@modelsDesc": {},
+    "navPaneStyle": "Navigation Pane Style",
+    "@navPaneStyle": {
+        "description": "Used as setting item for choosing the NavigationPaneStyle"
+    },
+    "no": "No",
+    "@no": {
+        "description": "The word no"
+    },
+    "primaryFont": "Primary Font",
+    "@primaryFont": {
+        "description": ""
+    },
+    "themeCustomization": "Theme Customization",
+    "@themeCustomization": {
+        "description": "Used in the appearance section as SettingsGroup title"
+    },
+    "themeSelection": "Primary Theme Selection",
+    "@themeSelection": {
+        "description": "Used in the appearance section in the Theme Customization group"
+    },
+    "typographyAndReadability": "Typography & Readability",
+    "@typographyAndReadability": {
+        "description": "Used in the appearance section in the Typography & Readability"
+    },
+    "search": "Search",
+    "@search": {
+        "description": "Used as placeholder for search bar"
+    },
+    "server": "Server",
+    "@server": {
+        "description": "Server in context of settings page"
+    },
+    "serverandnet": "Server & Network Configuration",
+    "@serverandnet": {
+        "description": "Server and network used in context of settings page"
+    },
+    "serverDesc": "Connection config",
+    "@serverDesc": {},
+    "settings": "Settings",
+    "@settings": {
+        "description": "The settings section page where the user can be redirected"
+    },
+    "yes": "Yes",
+    "@yes": {
+        "description": "The word yes"
+    }
+}
