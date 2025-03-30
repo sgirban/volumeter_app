@@ -1,6 +1,10 @@
 import 'package:fluent_ui/fluent_ui.dart'
     as fluent
-    show ColorExtension, FluentThemeData, NavigationPaneThemeData;
+    show
+        ColorExtension,
+        FluentThemeData,
+        FocusThemeData,
+        NavigationPaneThemeData;
 import 'package:flutter/material.dart'
     show
         CardTheme,
@@ -51,6 +55,7 @@ abstract class VolumeterTheme with _$VolumeterTheme {
         ),
       ),
     ),
+    focusColor: colors.primary,
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
         foregroundColor: colors.onPrimary,
@@ -71,6 +76,11 @@ abstract class VolumeterTheme with _$VolumeterTheme {
     brightness: colors.brightness,
     cardColor: colors.surfaceVariant,
     fontFamily: text.primaryFont,
+    focusTheme: fluent.FocusThemeData(
+      borderRadius: const BorderRadius.all(Radius.circular(8)),
+      primaryBorder: BorderSide(color: colors.primary),
+      secondaryBorder: BorderSide(color: colors.primary),
+    ),
     scaffoldBackgroundColor: colors.surface,
     accentColor: colors.primary.toAccentColor(),
     navigationPaneTheme: fluent.NavigationPaneThemeData(

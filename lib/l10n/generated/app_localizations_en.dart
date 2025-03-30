@@ -33,6 +33,18 @@ class AppLocalizationsEn extends AppLocalizations {
   String get back => 'Back';
 
   @override
+  String get cancel => 'Cancel';
+
+  @override
+  String get create => 'Create';
+
+  @override
+  String get createProject => 'Create Project';
+
+  @override
+  String get createProjectFail => 'Failed to create the project';
+
+  @override
   String get confirmClose => 'Confirm close';
 
   @override
@@ -48,10 +60,28 @@ class AppLocalizationsEn extends AppLocalizations {
   String get dataDesc => 'Storage & prvacy controls';
 
   @override
+  String get delete => 'Delete';
+
+  @override
+  String get deleteDialog => 'Delete project';
+
+  @override
+  String get deleteDialogMessage => 'Are you sure you want to delete this project?';
+
+  @override
+  String get deselect => 'Deselect';
+
+  @override
   String get distractionFreeMode => 'Distraction-Free Reading';
 
   @override
   String get distractionFreeModeDesc => 'Reduces the long paragraphs with short summary';
+
+  @override
+  String get download => 'Download';
+
+  @override
+  String get export => 'Export';
 
   @override
   String get home => 'Home';
@@ -64,6 +94,18 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get languageInterfaceDesc => 'Which language do you prefer?';
+
+  @override
+  String lastUpdateStatus(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      one: 'Last update: 1 day ago',
+      zero: 'Last update: today',
+      other: 'Last update: $count days ago',
+    );
+    return '$_temp0';
+  }
 
   @override
   String get layout => 'Layout';
@@ -87,13 +129,40 @@ class AppLocalizationsEn extends AppLocalizations {
   String get modelsDesc => 'Models management';
 
   @override
+  String get myProjects => 'My projects';
+
+  @override
   String get navPaneStyle => 'Navigation Pane Style';
+
+  @override
+  String get newProject => 'New Project';
 
   @override
   String get no => 'No';
 
   @override
+  String get noProjects => 'No projects found';
+
+  @override
+  String get open => 'Open';
+
+  @override
+  String get openProject => 'Open Project';
+
+  @override
   String get primaryFont => 'Primary Font';
+
+  @override
+  String get projectMustNotBeEmpty => 'You must give a name for your project';
+
+  @override
+  String get projectMustNotHaveSpecialChar => 'The project name shouldn\'t have special characters like .@!#\$%^,....';
+
+  @override
+  String get projectName => 'Project name';
+
+  @override
+  String get projectType => 'Project type';
 
   @override
   String get themeCustomization => 'Theme Customization';
@@ -106,6 +175,21 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get search => 'Search';
+
+  @override
+  String get select => 'Select';
+
+  @override
+  String selectedCount(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      one: '1 selected',
+      zero: 'None selected',
+      other: '$count selected',
+    );
+    return '$_temp0';
+  }
 
   @override
   String get server => 'Server';

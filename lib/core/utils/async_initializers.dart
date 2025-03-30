@@ -3,18 +3,24 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:volumeter/core/adaptive/platform/platform_detector.dart';
 import 'package:flutter_acrylic/flutter_acrylic.dart' as flutter_acrylic;
+import 'package:volumeter/core/utils/project/application_paths.dart';
 import 'package:volumeter/core/utils/settings/ui_settings.dart';
 import 'package:volumeter/core/utils/settings/ui_settings_adapter.dart';
+import 'package:volumeter/features/projects/domain/models/project_metadata.dart';
+import 'package:volumeter/features/projects/domain/models/project_metadata_adapter.dart';
 import 'package:volumeter/services/hive_service.dart';
 import 'package:window_manager/window_manager.dart';
 
 /// This function is ment do do the initial setup as intitalizing the  [InheritedWidget] tree and if is desktop
 /// environment then the window initialization must proceed.
 ///
-/// Here we also initializae [HiveService] in order to get the user prefferences and user stored data
 Future<void> initializeApp() async {
   final bindings = WidgetsFlutterBinding.ensureInitialized();
   FlutterNativeSplash.preserve(widgetsBinding: bindings);
+
+  if (!kIsWeb) {
+    ApplicationPaths.init();
+  }
 
   // Desktop intializer
   if (isDesktop) {
@@ -44,6 +50,11 @@ Future<void> initializeApp() async {
 /// - [UiSettings] box
 Future<void> initializeHive() async {
   // Hive initialize
+  // Registering the adapters
   await HiveService().registerAdapter(UiSettingsAdapter());
-  await HiveService().init(boxes: {UiSettings: 'ui_settings'});
+  await HiveService().registerAdapter(ProjectMetadataAdapter());
+  // Initialize the Hive
+  await HiveService().init(
+    boxes: {UiSettings: 'ui_settings', ProjectMetadata: 'projects'},
+  );
 }

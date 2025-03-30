@@ -108,6 +108,16 @@ class HiveService {
     return box.get(key) as T?;
   }
 
+  /// It loads all the elements from the appropriate [Box]. The box is infered using its generic [Type].
+  Future<List<T>> loadAll<T>() async {
+    _checkInitialized();
+    final boxName = _getBoxName<T>();
+    final box = await _openBox(boxName);
+    final delements = box.values;
+    final elements = delements.map((e) => e as T);
+    return elements.toList();
+  }
+
   /// It deletes the appropriate [Box] associated with the [key].
   ///
   /// Note that this opperation will delete all the [Box] information from the disk.
@@ -116,6 +126,13 @@ class HiveService {
     final boxName = _getBoxName<T>();
     final box = await _openBox(boxName);
     await box.delete(key);
+  }
+
+  Future<void> clear<T>() async {
+    _checkInitialized();
+    final boxName = _getBoxName<T>();
+    final box = await _openBox(boxName);
+    await box.clear();
   }
 
   void _debounce<T>(String key, Function() action, Duration duration) {

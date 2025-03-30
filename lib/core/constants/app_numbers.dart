@@ -1,0 +1,1 @@
+const kThumbnailNum = 13;

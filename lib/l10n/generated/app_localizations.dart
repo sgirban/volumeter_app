@@ -143,6 +143,30 @@ abstract class AppLocalizations {
   /// **'Back'**
   String get back;
 
+  /// The word cancel
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel'**
+  String get cancel;
+
+  /// The word create
+  ///
+  /// In en, this message translates to:
+  /// **'Create'**
+  String get create;
+
+  /// The title of project cration dialog
+  ///
+  /// In en, this message translates to:
+  /// **'Create Project'**
+  String get createProject;
+
+  /// The title of project cration dialog
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to create the project'**
+  String get createProjectFail;
+
   /// The title of confirm close dialog
   ///
   /// In en, this message translates to:
@@ -173,6 +197,30 @@ abstract class AppLocalizations {
   /// **'Storage & prvacy controls'**
   String get dataDesc;
 
+  /// The word delete
+  ///
+  /// In en, this message translates to:
+  /// **'Delete'**
+  String get delete;
+
+  /// The title of delete project dialog
+  ///
+  /// In en, this message translates to:
+  /// **'Delete project'**
+  String get deleteDialog;
+
+  /// Explicit detailed message for delete project dialog
+  ///
+  /// In en, this message translates to:
+  /// **'Are you sure you want to delete this project?'**
+  String get deleteDialogMessage;
+
+  /// Used as placeholder for deselect dropdown
+  ///
+  /// In en, this message translates to:
+  /// **'Deselect'**
+  String get deselect;
+
   /// Used in Appearance font and typography section
   ///
   /// In en, this message translates to:
@@ -184,6 +232,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Reduces the long paragraphs with short summary'**
   String get distractionFreeModeDesc;
+
+  /// The word download
+  ///
+  /// In en, this message translates to:
+  /// **'Download'**
+  String get download;
+
+  /// The word export
+  ///
+  /// In en, this message translates to:
+  /// **'Export'**
+  String get export;
 
   /// The title used for home page. The main page where user lands when opens the app
   ///
@@ -208,6 +268,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Which language do you prefer?'**
   String get languageInterfaceDesc;
+
+  /// The title of the last update section in the settings page
+  ///
+  /// In en, this message translates to:
+  /// **'{count, plural, other{Last update: {count} days ago} zero{Last update: today} one{Last update: 1 day ago}}'**
+  String lastUpdateStatus(int count);
 
   /// The usual layout used both in interface and design
   ///
@@ -251,11 +317,23 @@ abstract class AppLocalizations {
   /// **'Models management'**
   String get modelsDesc;
 
+  /// The title of the projcts page
+  ///
+  /// In en, this message translates to:
+  /// **'My projects'**
+  String get myProjects;
+
   /// Used as setting item for choosing the NavigationPaneStyle
   ///
   /// In en, this message translates to:
   /// **'Navigation Pane Style'**
   String get navPaneStyle;
+
+  /// The buton title that aims to create a new project
+  ///
+  /// In en, this message translates to:
+  /// **'New Project'**
+  String get newProject;
 
   /// The word no
   ///
@@ -263,11 +341,53 @@ abstract class AppLocalizations {
   /// **'No'**
   String get no;
 
+  /// The message displayed when there are no projects
+  ///
+  /// In en, this message translates to:
+  /// **'No projects found'**
+  String get noProjects;
+
+  /// The word open
+  ///
+  /// In en, this message translates to:
+  /// **'Open'**
+  String get open;
+
+  /// The button title that aims to open a project
+  ///
+  /// In en, this message translates to:
+  /// **'Open Project'**
+  String get openProject;
+
   ///
   ///
   /// In en, this message translates to:
   /// **'Primary Font'**
   String get primaryFont;
+
+  /// The dialog error for empty project name
+  ///
+  /// In en, this message translates to:
+  /// **'You must give a name for your project'**
+  String get projectMustNotBeEmpty;
+
+  /// The dialog error for project special characters
+  ///
+  /// In en, this message translates to:
+  /// **'The project name shouldn\'t have special characters like .@!#\$%^,....'**
+  String get projectMustNotHaveSpecialChar;
+
+  /// The title of the project name field
+  ///
+  /// In en, this message translates to:
+  /// **'Project name'**
+  String get projectName;
+
+  /// The title of the project type field
+  ///
+  /// In en, this message translates to:
+  /// **'Project type'**
+  String get projectType;
 
   /// Used in the appearance section as SettingsGroup title
   ///
@@ -292,6 +412,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Search'**
   String get search;
+
+  /// Used as placeholder for select dropdown
+  ///
+  /// In en, this message translates to:
+  /// **'Select'**
+  String get select;
+
+  /// The title of the selected items in the list
+  ///
+  /// In en, this message translates to:
+  /// **'{count, plural, other{{count} selected} zero{None selected} one{1 selected}}'**
+  String selectedCount(int count);
 
   /// Server in context of settings page
   ///

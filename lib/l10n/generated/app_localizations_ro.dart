@@ -33,6 +33,18 @@ class AppLocalizationsRo extends AppLocalizations {
   String get back => 'Înapoi';
 
   @override
+  String get cancel => 'Anulează';
+
+  @override
+  String get create => 'Crează';
+
+  @override
+  String get createProject => 'Crează un proiect';
+
+  @override
+  String get createProjectFail => 'Eșuare creare proiect';
+
+  @override
   String get confirmClose => 'Confirmare închidere';
 
   @override
@@ -48,10 +60,28 @@ class AppLocalizationsRo extends AppLocalizations {
   String get dataDesc => 'Stocare și confidențialitate';
 
   @override
+  String get delete => 'Șterge';
+
+  @override
+  String get deleteDialog => 'Șterge proiectul';
+
+  @override
+  String get deleteDialogMessage => 'Sigur dorești să ștergi proiectul?';
+
+  @override
+  String get deselect => 'Deselectează';
+
+  @override
   String get distractionFreeMode => 'Mod „citire fără distragere”';
 
   @override
   String get distractionFreeModeDesc => 'Înlocuiește paragrefele lungi cu o scurtă descriere a lor';
+
+  @override
+  String get download => 'Descarcă';
+
+  @override
+  String get export => 'Exportă';
 
   @override
   String get home => 'Acasă';
@@ -64,6 +94,18 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get languageInterfaceDesc => 'Selectează limba pe care o preferi';
+
+  @override
+  String lastUpdateStatus(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      one: 'Last update: acum 1 zi',
+      zero: 'Ultima actualizare: astăzi',
+      other: 'Ultima actualizare: acum $count zile',
+    );
+    return '$_temp0';
+  }
 
   @override
   String get layout => 'Interfață';
@@ -87,13 +129,40 @@ class AppLocalizationsRo extends AppLocalizations {
   String get modelsDesc => 'Gestionare modele AI';
 
   @override
+  String get myProjects => 'Proiecte';
+
+  @override
   String get navPaneStyle => 'Stil navigator interfață';
+
+  @override
+  String get newProject => 'Proiect nou';
 
   @override
   String get no => 'Nu';
 
   @override
+  String get noProjects => 'Nu există proiecte';
+
+  @override
+  String get open => 'Deschide';
+
+  @override
+  String get openProject => 'Deschide proiect';
+
+  @override
   String get primaryFont => 'Font principal';
+
+  @override
+  String get projectMustNotBeEmpty => 'Trebuie să atribui un nume proiectului';
+
+  @override
+  String get projectMustNotHaveSpecialChar => 'Numele proiectului nu poate conține caractere precum .@!#\$%^,...';
+
+  @override
+  String get projectName => 'Nume proiect';
+
+  @override
+  String get projectType => 'Tip proiect';
 
   @override
   String get themeCustomization => 'Configurare temă';
@@ -106,6 +175,20 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get search => 'Caută';
+
+  @override
+  String get select => 'Selectează';
+
+  @override
+  String selectedCount(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count selectate',
+      one: '1 selectat',
+    );
+    return '$_temp0';
+  }
 
   @override
   String get server => 'Server';

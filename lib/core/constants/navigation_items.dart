@@ -34,7 +34,7 @@ const roNavItems = [
       desktop: fluent.FluentIcons.project_collection,
       android: Icons.folder,
     ),
-    title: Text('Projects'),
+    title: Text('Proiecte'),
     body: SizedBox.shrink(),
   ),
 ];
