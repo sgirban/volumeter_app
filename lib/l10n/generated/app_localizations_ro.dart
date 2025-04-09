@@ -15,6 +15,9 @@ class AppLocalizationsRo extends AppLocalizations {
   String get aboutDesc => 'Informații aplicație';
 
   @override
+  String get addDepthImage => 'Adauga imagine de adâncime';
+
+  @override
   String get advanced => 'Avansat';
 
   @override
@@ -30,7 +33,13 @@ class AppLocalizationsRo extends AppLocalizations {
   String get appearanceDesc => 'Personalizare interfață';
 
   @override
+  String get assets => 'Resurse';
+
+  @override
   String get back => 'Înapoi';
+
+  @override
+  String get browse => 'Răsfoiește';
 
   @override
   String get cancel => 'Anulează';
@@ -81,10 +90,31 @@ class AppLocalizationsRo extends AppLocalizations {
   String get download => 'Descarcă';
 
   @override
+  String get documentation => 'Manual de utilizare';
+
+  @override
+  String get dragImageHere => 'Trage imaginea aici, sau';
+
+  @override
+  String get edit => 'Editează';
+
+  @override
   String get export => 'Exportă';
 
   @override
   String get home => 'Acasă';
+
+  @override
+  String get help => 'Ajutor';
+
+  @override
+  String get import => 'Importă';
+
+  @override
+  String get k2DWorkspace => 'Spațiu 2D';
+
+  @override
+  String get k3DWorkspace => 'Spațiu 3D';
 
   @override
   String get languageAndRegion => 'Limbă și regiune';
@@ -135,6 +165,9 @@ class AppLocalizationsRo extends AppLocalizations {
   String get navPaneStyle => 'Stil navigator interfață';
 
   @override
+  String get neww => 'Nou';
+
+  @override
   String get newProject => 'Proiect nou';
 
   @override
@@ -153,6 +186,9 @@ class AppLocalizationsRo extends AppLocalizations {
   String get primaryFont => 'Font principal';
 
   @override
+  String get project => 'Proiect';
+
+  @override
   String get projectMustNotBeEmpty => 'Trebuie să atribui un nume proiectului';
 
   @override
@@ -163,6 +199,9 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get projectType => 'Tip proiect';
+
+  @override
+  String get redo => 'Redo';
 
   @override
   String get themeCustomization => 'Configurare temă';
@@ -201,6 +240,18 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get settings => 'Setări';
+
+  @override
+  String get statisticsView => 'Vizualizare statistică';
+
+  @override
+  String get toolProperties => 'Configurari tool';
+
+  @override
+  String get undo => 'Anulează';
+
+  @override
+  String get view => 'Vizualizare';
 
   @override
   String get yes => 'Da';

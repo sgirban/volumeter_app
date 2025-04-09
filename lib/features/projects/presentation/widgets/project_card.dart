@@ -1,23 +1,23 @@
 import 'dart:io';
-
 import 'package:fluent_ui/fluent_ui.dart' as fluent;
 import 'package:flutter/cupertino.dart' show CupertinoIcons;
 import 'package:flutter/material.dart';
-import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shimmer/shimmer.dart';
 import 'package:volumeter/core/adaptive/platform/platform_detector.dart';
 import 'package:volumeter/core/adaptive/widgets/adaptive_dialog.dart';
 import 'package:volumeter/core/extensions/context_extension.dart';
-import 'package:volumeter/core/routes/router.dart' show rootNavigatorKey;
+import 'package:volumeter/core/routes/router.dart'
+    show rootNavigatorKey, router;
 import 'package:volumeter/core/utils/logger.dart';
-import 'package:volumeter/core/utils/project/application_paths.dart';
 import 'package:volumeter/core/utils/project/delete_project_io.dart';
+import 'package:volumeter/core/utils/project/workspace_utils.dart';
 import 'package:volumeter/features/projects/domain/models/project_metadata.dart';
 import 'package:volumeter/features/projects/domain/models/project_status.dart';
 import 'package:volumeter/features/projects/presentation/widgets/folder_clipper.dart';
 import 'package:volumeter/providers/projects_provider.dart';
 import 'package:volumeter/providers/theme_provider.dart';
+import 'package:volumeter/providers/workspace_provider.dart';
 
 class ProjectCard extends ConsumerStatefulWidget {
   const ProjectCard({super.key, required this.project});
@@ -57,6 +57,7 @@ class _ProjectCardState extends ConsumerState<ProjectCard>
         .watch(projectSelectionProvider)
         .contains(widget.project.id);
     return GestureDetector(
+      onTap: () => _handleOpen(),
       onDoubleTap: () {
         /// select or deselect the project
         if (isSelected) {
@@ -85,7 +86,7 @@ class _ProjectCardState extends ConsumerState<ProjectCard>
                 fluent.MenuFlyoutItem(
                   leading: const Icon(fluent.FluentIcons.open_file),
                   text: Text(localizations.openProject),
-                  onPressed: () {},
+                  onPressed: _handleOpen,
                 ),
                 const fluent.MenuFlyoutSeparator(),
                 if (isSelected)
@@ -116,7 +117,10 @@ class _ProjectCardState extends ConsumerState<ProjectCard>
                 fluent.MenuFlyoutItem(
                   leading: const Icon(fluent.FluentIcons.delete),
                   text: Text(localizations.delete),
-                  onPressed: _handleDelete,
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                    _handleDelete();
+                  },
                 ),
               ],
             );
@@ -246,7 +250,7 @@ class _ProjectCardState extends ConsumerState<ProjectCard>
                           fluent.MenuFlyoutItem(
                             leading: const Icon(fluent.FluentIcons.open_file),
                             text: Text(localizations.openProject),
-                            onPressed: () {},
+                            onPressed: _handleOpen,
                           ),
                           if (!isSelected)
                             fluent.MenuFlyoutItem(
@@ -280,7 +284,10 @@ class _ProjectCardState extends ConsumerState<ProjectCard>
                           fluent.MenuFlyoutItem(
                             leading: const Icon(fluent.FluentIcons.delete),
                             text: Text(localizations.delete),
-                            onPressed: _handleDelete,
+                            onPressed: () {
+                              Navigator.pop(context);
+                              _handleDelete();
+                            },
                           ),
                         ],
                       );
@@ -300,7 +307,7 @@ class _ProjectCardState extends ConsumerState<ProjectCard>
                         child: ListTile(
                           leading: const Icon(Icons.open_in_new_rounded),
                           title: Text(context.localizations.openProject),
-                          onTap: () {},
+                          onTap: _handleOpen,
                         ),
                       ),
                       if (!isSelected)
@@ -529,5 +536,10 @@ class _ProjectCardState extends ConsumerState<ProjectCard>
         ),
       ),
     );
+  }
+
+  void _handleOpen() {
+    projectWorkspaceInit(widget.project, ref);
+    router.push('/projects/workspace');
   }
 }

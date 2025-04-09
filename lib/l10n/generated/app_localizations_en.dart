@@ -15,6 +15,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get aboutDesc => 'App metadata & support';
 
   @override
+  String get addDepthImage => 'Add  as depth map';
+
+  @override
   String get advanced => 'Advanced';
 
   @override
@@ -30,7 +33,13 @@ class AppLocalizationsEn extends AppLocalizations {
   String get appearanceDesc => 'Interface customization';
 
   @override
+  String get assets => 'Assets';
+
+  @override
   String get back => 'Back';
+
+  @override
+  String get browse => 'Browse';
 
   @override
   String get cancel => 'Cancel';
@@ -81,10 +90,31 @@ class AppLocalizationsEn extends AppLocalizations {
   String get download => 'Download';
 
   @override
+  String get documentation => 'Documentation';
+
+  @override
+  String get dragImageHere => 'Drag image here, or';
+
+  @override
+  String get edit => 'Edit';
+
+  @override
   String get export => 'Export';
 
   @override
   String get home => 'Home';
+
+  @override
+  String get help => 'Help';
+
+  @override
+  String get import => 'Import';
+
+  @override
+  String get k2DWorkspace => '2D Workspace';
+
+  @override
+  String get k3DWorkspace => '3D Workspace';
 
   @override
   String get languageAndRegion => 'Language & Region';
@@ -135,6 +165,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get navPaneStyle => 'Navigation Pane Style';
 
   @override
+  String get neww => 'New';
+
+  @override
   String get newProject => 'New Project';
 
   @override
@@ -153,6 +186,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get primaryFont => 'Primary Font';
 
   @override
+  String get project => 'Project';
+
+  @override
   String get projectMustNotBeEmpty => 'You must give a name for your project';
 
   @override
@@ -163,6 +199,9 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get projectType => 'Project type';
+
+  @override
+  String get redo => 'Redo';
 
   @override
   String get themeCustomization => 'Theme Customization';
@@ -202,6 +241,18 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get settings => 'Settings';
+
+  @override
+  String get statisticsView => 'Statistics View';
+
+  @override
+  String get toolProperties => 'Tool Properties';
+
+  @override
+  String get undo => 'Undo';
+
+  @override
+  String get view => 'View';
 
   @override
   String get yes => 'Yes';

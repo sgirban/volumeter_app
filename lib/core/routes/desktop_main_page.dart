@@ -59,7 +59,9 @@ class _DesktopMainPageState extends ConsumerState<DesktopMainPage>
         .where((item) => item.key != null)
         .toList()
         .indexWhere((item) => item.key == Key(location));
-
+    if (location.contains('projects')) {
+      return 1;
+    }
     if (indexMain == -1) {
       int indexFooter = navFootItems
           .where((element) => element.key != null)

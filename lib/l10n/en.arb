@@ -12,6 +12,10 @@
     "@aboutDesc": {
         "description": "About as text for setting item"
     },
+    "addDepthImage": "Add  as depth map",
+    "@addDepthImage": {
+        "description": "Add depth image"
+    },
     "advanced": "Advanced",
     "@advanced": {
         "description": "It is used in context of setting item category. Here are main majority of application configurations"
@@ -30,9 +34,17 @@
     },
     "appearanceDesc": "Interface customization",
     "@appearanceDesc": {},
+    "assets": "Assets",
+    "@assets": {
+        "description": "The word assets"
+    },
     "back": "Back",
     "@back": {
         "description": "Used as tooltip for button that goes to previous action or undo an action"
+    },
+    "browse": "Browse",
+    "@browse": {
+        "description": "The word browse"
     },
     "cancel": "Cancel",
     "@cancel": {
@@ -96,6 +108,18 @@
     "@download": {
         "description": "The word download"
     },
+    "documentation": "Documentation",
+    "@documentation": {
+        "description": "The word documentation"
+    },
+    "dragImageHere": "Drag image here, or",
+    "@dragImageHere": {
+        "description": "The message displayed when the user can drag an image to the app"
+    },
+    "edit": "Edit",
+    "@edit": {
+        "description": "The word edit"
+    },
     "export": "Export",
     "@export": {
         "description": "The word export"
@@ -103,6 +127,22 @@
     "home": "Home",
     "@home": {
         "description": "The title used for home page. The main page where user lands when opens the app"
+    },
+    "help": "Help",
+    "@help": {
+        "description": "The word help"
+    },
+    "import": "Import",
+    "@import": {
+        "description": "The word import"
+    },
+    "k2DWorkspace": "2D Workspace",
+    "@k2DWorkspace": {
+        "description": "The title of 2D workspace page"
+    },
+    "k3DWorkspace": "3D Workspace",
+    "@k3DWorkspace": {
+        "description": "The title of 3D workspace page"
     },
     "languageAndRegion": "Language & Region",
     "@languageAndRegion": {
@@ -152,6 +192,10 @@
     "@navPaneStyle": {
         "description": "Used as setting item for choosing the NavigationPaneStyle"
     },
+    "neww": "New",
+    "@neww": {
+        "description": "The word new"
+    },
     "newProject": "New Project",
     "@newProject": {
         "description": "The buton title that aims to create a new project"
@@ -176,6 +220,10 @@
     "@primaryFont": {
         "description": ""
     },
+    "project": "Project",
+    "@project": {
+        "description": "The word project"
+    },
     "projectMustNotBeEmpty": "You must give a name for your project",
     "@projectMustNotBeEmpty": {
         "description": "The dialog error for empty project name"
@@ -191,6 +239,10 @@
     "projectType": "Project type",
     "@projectType": {
         "description": "The title of the project type field"
+    },
+    "redo": "Redo",
+    "@redo": {
+        "description": "The word redo"
     },
     "themeCustomization": "Theme Customization",
     "@themeCustomization": {
@@ -235,6 +287,22 @@
     "settings": "Settings",
     "@settings": {
         "description": "The settings section page where the user can be redirected"
+    },
+    "statisticsView": "Statistics View",
+    "@statisticsView": {
+        "description": "The title of the statistics page"
+    },
+    "toolProperties": "Tool Properties",
+    "@toolProperties": {
+        "description": "The title of the tool properties page"
+    },
+    "undo": "Undo",
+    "@undo": {
+        "description": "The word undo"
+    },
+    "view": "View",
+    "@view": {
+        "description": "The word view"
     },
     "yes": "Yes",
     "@yes": {

@@ -7,6 +7,8 @@ import 'package:uuid/uuid.dart';
 import 'package:volumeter/core/constants/app_numbers.dart';
 import 'package:volumeter/core/utils/logger.dart';
 import 'package:volumeter/core/utils/project/application_paths.dart';
+import 'package:volumeter/features/projects/domain/models/assets_manifest.dart';
+import 'package:volumeter/features/projects/domain/models/project_file.dart';
 import 'package:volumeter/features/projects/domain/models/project_metadata.dart';
 import 'package:volumeter/features/projects/domain/models/project_mode.dart';
 import 'package:volumeter/features/projects/domain/models/project_status.dart';
@@ -117,22 +119,9 @@ void _initializeConfigFiles(ProjectMetadata project) {
   /// Project Settings
   ///
   /// `project_settings.json`
-  File('${project.path}/config/project_settings.json').writeAsStringSync(
-    jsonEncode({
-      'project': {
-        'name': project.name,
-        'id': project.id,
-        'mode_id': project.mode.index,
-        'mode': project.mode.value,
-        'created': project.createdAt.toIso8601String(),
-        'last_update': project.updatedAt.toIso8601String(),
-        'status': project.status.value,
-        'status_id': project.status.index,
-        'description': project.description,
-      },
-      'sync_layers': true,
-    }),
-  );
+  File(
+    '${project.path}/config/project_settings.json',
+  ).writeAsStringSync(jsonEncode(ProjectFile.initial(project).toJson()));
 
   /// `sync_manifest.json`
   ///
@@ -142,6 +131,9 @@ void _initializeConfigFiles(ProjectMetadata project) {
       '${project.path}/assets/rgbd/sync_manifest.json',
     ).writeAsStringSync(jsonEncode({'pairs': []}));
   }
+  File(
+    '${project.path}/assets/assets_manifest.json',
+  ).writeAsStringSync(jsonEncode(AssetsManifest(assets: []).toJson()));
 
   File(
     '${project.path}/config/server_config.json',

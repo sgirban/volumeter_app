@@ -107,6 +107,12 @@ abstract class AppLocalizations {
   /// **'App metadata & support'**
   String get aboutDesc;
 
+  /// Add depth image
+  ///
+  /// In en, this message translates to:
+  /// **'Add  as depth map'**
+  String get addDepthImage;
+
   /// It is used in context of setting item category. Here are main majority of application configurations
   ///
   /// In en, this message translates to:
@@ -137,11 +143,23 @@ abstract class AppLocalizations {
   /// **'Interface customization'**
   String get appearanceDesc;
 
+  /// The word assets
+  ///
+  /// In en, this message translates to:
+  /// **'Assets'**
+  String get assets;
+
   /// Used as tooltip for button that goes to previous action or undo an action
   ///
   /// In en, this message translates to:
   /// **'Back'**
   String get back;
+
+  /// The word browse
+  ///
+  /// In en, this message translates to:
+  /// **'Browse'**
+  String get browse;
 
   /// The word cancel
   ///
@@ -239,6 +257,24 @@ abstract class AppLocalizations {
   /// **'Download'**
   String get download;
 
+  /// The word documentation
+  ///
+  /// In en, this message translates to:
+  /// **'Documentation'**
+  String get documentation;
+
+  /// The message displayed when the user can drag an image to the app
+  ///
+  /// In en, this message translates to:
+  /// **'Drag image here, or'**
+  String get dragImageHere;
+
+  /// The word edit
+  ///
+  /// In en, this message translates to:
+  /// **'Edit'**
+  String get edit;
+
   /// The word export
   ///
   /// In en, this message translates to:
@@ -250,6 +286,30 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Home'**
   String get home;
+
+  /// The word help
+  ///
+  /// In en, this message translates to:
+  /// **'Help'**
+  String get help;
+
+  /// The word import
+  ///
+  /// In en, this message translates to:
+  /// **'Import'**
+  String get import;
+
+  /// The title of 2D workspace page
+  ///
+  /// In en, this message translates to:
+  /// **'2D Workspace'**
+  String get k2DWorkspace;
+
+  /// The title of 3D workspace page
+  ///
+  /// In en, this message translates to:
+  /// **'3D Workspace'**
+  String get k3DWorkspace;
 
   /// Used as appearance settings section group title
   ///
@@ -329,6 +389,12 @@ abstract class AppLocalizations {
   /// **'Navigation Pane Style'**
   String get navPaneStyle;
 
+  /// The word new
+  ///
+  /// In en, this message translates to:
+  /// **'New'**
+  String get neww;
+
   /// The buton title that aims to create a new project
   ///
   /// In en, this message translates to:
@@ -365,6 +431,12 @@ abstract class AppLocalizations {
   /// **'Primary Font'**
   String get primaryFont;
 
+  /// The word project
+  ///
+  /// In en, this message translates to:
+  /// **'Project'**
+  String get project;
+
   /// The dialog error for empty project name
   ///
   /// In en, this message translates to:
@@ -388,6 +460,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Project type'**
   String get projectType;
+
+  /// The word redo
+  ///
+  /// In en, this message translates to:
+  /// **'Redo'**
+  String get redo;
 
   /// Used in the appearance section as SettingsGroup title
   ///
@@ -448,6 +526,30 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Settings'**
   String get settings;
+
+  /// The title of the statistics page
+  ///
+  /// In en, this message translates to:
+  /// **'Statistics View'**
+  String get statisticsView;
+
+  /// The title of the tool properties page
+  ///
+  /// In en, this message translates to:
+  /// **'Tool Properties'**
+  String get toolProperties;
+
+  /// The word undo
+  ///
+  /// In en, this message translates to:
+  /// **'Undo'**
+  String get undo;
+
+  /// The word view
+  ///
+  /// In en, this message translates to:
+  /// **'View'**
+  String get view;
 
   /// The word yes
   ///
