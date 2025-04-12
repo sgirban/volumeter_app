@@ -2,6 +2,8 @@ import 'dart:convert';
 import 'dart:io';
 import 'dart:ui' as ui;
 import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
+import 'package:image/image.dart' as img;
 import 'package:uuid/uuid.dart';
 import 'package:volumeter/features/projects/domain/models/assets_manifest.dart';
 import 'package:volumeter/features/projects/domain/models/project_metadata.dart';
@@ -177,4 +179,100 @@ Future<ImageAsset?> importAssetsByDrag(
     debugPrint("Error processing file: $e");
     return null;
   }
+}
+
+Future<void> deleteAsset(ImageAsset asset, ProjectMetadata project) async {
+  final file = File(asset.path);
+
+  final assetsMenifest = File('${project.path}/assets/assets_manifest.json');
+  if (!assetsMenifest.existsSync()) {
+    throw Exception('Assets manifest file not found');
+  }
+  if (await file.exists()) {
+    await file.delete();
+  }
+  final manifestContent = await assetsMenifest.readAsString();
+  final manifest = AssetsManifest.fromJson(jsonDecode(manifestContent));
+  manifest.assets.removeWhere((a) => a.id == asset.id);
+  if (asset.pairedAssetId != null) {
+    final pairedPath =
+        manifest.depths
+            .where((a) => a.id == asset.pairedAssetId)
+            .firstOrNull
+            ?.path;
+    if (pairedPath == null) {
+      return;
+    }
+    final pairedFile = File(pairedPath);
+    await pairedFile.delete();
+    manifest.depths.removeWhere((a) => a.id == asset.pairedAssetId);
+  }
+
+  await assetsMenifest.writeAsString(jsonEncode(manifest.toJson()));
+}
+
+Future<void> renameIOAsset(
+  ImageAsset asset,
+  String newName,
+  ProjectMetadata project,
+) async {
+  final assetsMenifest = File('${project.path}/assets/assets_manifest.json');
+  if (!assetsMenifest.existsSync()) {
+    throw Exception('Assets manifest file not found');
+  }
+  final manifestContent = await assetsMenifest.readAsString();
+  final manifest = AssetsManifest.fromJson(jsonDecode(manifestContent));
+  final nasset = manifest.assets.where((a) => a.id == asset.id).firstOrNull;
+  if (nasset == null) {
+    return;
+  }
+  manifest.assets.removeWhere((a) => a.id == asset.id);
+  manifest.assets.add(nasset.copyWith(name: newName.split('.').first));
+  if (asset.pairedAssetId != null) {
+    final pairedAsset =
+        manifest.depths.where((a) => a.id == asset.pairedAssetId).firstOrNull;
+    if (pairedAsset == null) {
+      return;
+    }
+    manifest.depths.removeWhere((a) => a.id == asset.pairedAssetId);
+    manifest.depths.add(pairedAsset.copyWith(name: newName.split('.').first));
+  }
+  await assetsMenifest.writeAsString(jsonEncode(manifest.toJson()));
+}
+
+Future<void> generateAsset({
+  required String name,
+  required int width,
+  required int height,
+  required Color color,
+  required ProjectMetadata project,
+}) async {
+  final image = img.Image(width: width, height: height, numChannels: 4);
+
+  final img.Color fillColor = img.ColorInt32.rgba(
+    (color.r * 255).clamp(0, 255).toInt(),
+    (color.g * 255).clamp(0, 255).toInt(),
+    (color.b * 255).clamp(0, 255).toInt(),
+    (color.a * 255).clamp(0, 255).toInt(),
+  );
+
+  for (int y = 0; y < height; y++) {
+    for (int x = 0; x < width; x++) {
+      image.setPixel(x, y, fillColor);
+    }
+  }
+  final pngBytes = img.encodePng(image);
+  final imgFile = File(
+    '${project.path}/assets/rgb/raw/${name.split('.').first}.png',
+  );
+  await imgFile.writeAsBytes(pngBytes);
+  updateAssetsManifest({
+    'project': project,
+    'assets': ImageAsset(
+      id: const Uuid().v4(),
+      name: name,
+      path: imgFile.path,
+      type: AssetType.rgb,
+    ),
+  });
 }

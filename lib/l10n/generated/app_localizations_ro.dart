@@ -45,6 +45,9 @@ class AppLocalizationsRo extends AppLocalizations {
   String get cancel => 'Anulează';
 
   @override
+  String get close => 'Închide';
+
+  @override
   String get create => 'Crează';
 
   @override
@@ -102,7 +105,13 @@ class AppLocalizationsRo extends AppLocalizations {
   String get export => 'Exportă';
 
   @override
+  String get generate => 'Generează';
+
+  @override
   String get home => 'Acasă';
+
+  @override
+  String get height => 'Înălțime';
 
   @override
   String get help => 'Ajutor';
@@ -162,6 +171,9 @@ class AppLocalizationsRo extends AppLocalizations {
   String get myProjects => 'Proiecte';
 
   @override
+  String get name => 'Nume';
+
+  @override
   String get navPaneStyle => 'Stil navigator interfață';
 
   @override
@@ -202,6 +214,9 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get redo => 'Redo';
+
+  @override
+  String get rename => 'Renumește';
 
   @override
   String get themeCustomization => 'Configurare temă';
@@ -252,6 +267,9 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get view => 'Vizualizare';
+
+  @override
+  String get width => 'Lățime';
 
   @override
   String get yes => 'Da';

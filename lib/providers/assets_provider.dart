@@ -1,5 +1,4 @@
 import 'dart:io';
-
 import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:volumeter/core/utils/project/assets_utils.dart';
@@ -49,6 +48,10 @@ class AssetsProviderNotifier extends StateNotifier<List<ImageAsset>> {
     if (asset != null) {
       addAsset(asset);
     }
+  }
+
+  ImageAsset? getAssetById(String id) {
+    return state.where((asset) => asset.id == id).firstOrNull;
   }
 }
 

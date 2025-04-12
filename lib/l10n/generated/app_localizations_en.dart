@@ -45,6 +45,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get cancel => 'Cancel';
 
   @override
+  String get close => 'Close';
+
+  @override
   String get create => 'Create';
 
   @override
@@ -102,7 +105,13 @@ class AppLocalizationsEn extends AppLocalizations {
   String get export => 'Export';
 
   @override
+  String get generate => 'Generate';
+
+  @override
   String get home => 'Home';
+
+  @override
+  String get height => 'Height';
 
   @override
   String get help => 'Help';
@@ -162,6 +171,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get myProjects => 'My projects';
 
   @override
+  String get name => 'Name';
+
+  @override
   String get navPaneStyle => 'Navigation Pane Style';
 
   @override
@@ -202,6 +214,9 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get redo => 'Redo';
+
+  @override
+  String get rename => 'Rename';
 
   @override
   String get themeCustomization => 'Theme Customization';
@@ -253,6 +268,9 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get view => 'View';
+
+  @override
+  String get width => 'Width';
 
   @override
   String get yes => 'Yes';

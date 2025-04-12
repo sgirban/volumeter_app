@@ -50,6 +50,10 @@
     "@cancel": {
         "description": "The word cancel"
     },
+    "close": "Close",
+    "@close": {
+        "description": "The word close"
+    },
     "create": "Create",
     "@create": {
         "description": "The word create"
@@ -124,9 +128,17 @@
     "@export": {
         "description": "The word export"
     },
+    "generate": "Generate",
+    "@generate": {
+        "description": "The word generate"
+    },
     "home": "Home",
     "@home": {
         "description": "The title used for home page. The main page where user lands when opens the app"
+    },
+    "height": "Height",
+    "@height": {
+        "description": "The word height"
     },
     "help": "Help",
     "@help": {
@@ -188,6 +200,10 @@
     "@myProjects": {
         "description": "The title of the projcts page"
     },
+    "name": "Name",
+    "@name": {
+        "description": "The word name"
+    },
     "navPaneStyle": "Navigation Pane Style",
     "@navPaneStyle": {
         "description": "Used as setting item for choosing the NavigationPaneStyle"
@@ -243,6 +259,10 @@
     "redo": "Redo",
     "@redo": {
         "description": "The word redo"
+    },
+    "rename": "Rename",
+    "@rename": {
+        "description": "The word rename"
     },
     "themeCustomization": "Theme Customization",
     "@themeCustomization": {
@@ -303,6 +323,10 @@
     "view": "View",
     "@view": {
         "description": "The word view"
+    },
+    "width": "Width",
+    "@width": {
+        "description": "The word width"
     },
     "yes": "Yes",
     "@yes": {

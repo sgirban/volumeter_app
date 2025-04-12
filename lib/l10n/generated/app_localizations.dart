@@ -167,6 +167,12 @@ abstract class AppLocalizations {
   /// **'Cancel'**
   String get cancel;
 
+  /// The word close
+  ///
+  /// In en, this message translates to:
+  /// **'Close'**
+  String get close;
+
   /// The word create
   ///
   /// In en, this message translates to:
@@ -281,11 +287,23 @@ abstract class AppLocalizations {
   /// **'Export'**
   String get export;
 
+  /// The word generate
+  ///
+  /// In en, this message translates to:
+  /// **'Generate'**
+  String get generate;
+
   /// The title used for home page. The main page where user lands when opens the app
   ///
   /// In en, this message translates to:
   /// **'Home'**
   String get home;
+
+  /// The word height
+  ///
+  /// In en, this message translates to:
+  /// **'Height'**
+  String get height;
 
   /// The word help
   ///
@@ -383,6 +401,12 @@ abstract class AppLocalizations {
   /// **'My projects'**
   String get myProjects;
 
+  /// The word name
+  ///
+  /// In en, this message translates to:
+  /// **'Name'**
+  String get name;
+
   /// Used as setting item for choosing the NavigationPaneStyle
   ///
   /// In en, this message translates to:
@@ -467,6 +491,12 @@ abstract class AppLocalizations {
   /// **'Redo'**
   String get redo;
 
+  /// The word rename
+  ///
+  /// In en, this message translates to:
+  /// **'Rename'**
+  String get rename;
+
   /// Used in the appearance section as SettingsGroup title
   ///
   /// In en, this message translates to:
@@ -550,6 +580,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'View'**
   String get view;
+
+  /// The word width
+  ///
+  /// In en, this message translates to:
+  /// **'Width'**
+  String get width;
 
   /// The word yes
   ///

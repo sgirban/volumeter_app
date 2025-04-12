@@ -17,7 +17,6 @@ import 'package:volumeter/features/projects/domain/models/project_status.dart';
 import 'package:volumeter/features/projects/presentation/widgets/folder_clipper.dart';
 import 'package:volumeter/providers/projects_provider.dart';
 import 'package:volumeter/providers/theme_provider.dart';
-import 'package:volumeter/providers/workspace_provider.dart';
 
 class ProjectCard extends ConsumerStatefulWidget {
   const ProjectCard({super.key, required this.project});

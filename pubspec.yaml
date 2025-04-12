@@ -73,6 +73,8 @@ dependencies:
   image: ^4.5.4
   dotted_border: ^2.1.0
   file_picker: ^10.0.0
+  elastic_drawer: ^2.0.2
+  tab_container: ^3.5.3
   
 
 dev_dependencies:
