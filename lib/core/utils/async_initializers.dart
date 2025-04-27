@@ -3,6 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:volumeter/core/adaptive/platform/platform_detector.dart';
 import 'package:flutter_acrylic/flutter_acrylic.dart' as flutter_acrylic;
+import 'package:volumeter/core/constants/network_constants.dart';
 import 'package:volumeter/core/utils/project/application_paths.dart';
 import 'package:volumeter/core/utils/settings/ui_settings.dart';
 import 'package:volumeter/core/utils/settings/ui_settings_adapter.dart';
@@ -41,6 +42,8 @@ Future<void> initializeApp() async {
       });
     }
   }
+  kServerIP = 'mosni.go.ro';
+  kServerPort = 50051;
 }
 
 /// This function is ment to register the TypeAdapters for [HiveService] and

@@ -143,6 +143,12 @@ abstract class AppLocalizations {
   /// **'Interface customization'**
   String get appearanceDesc;
 
+  /// The word arrow
+  ///
+  /// In en, this message translates to:
+  /// **'Arrow'**
+  String get arrow;
+
   /// The word assets
   ///
   /// In en, this message translates to:
@@ -167,11 +173,35 @@ abstract class AppLocalizations {
   /// **'Cancel'**
   String get cancel;
 
+  /// The word circle
+  ///
+  /// In en, this message translates to:
+  /// **'Circle'**
+  String get circle;
+
   /// The word close
   ///
   /// In en, this message translates to:
   /// **'Close'**
   String get close;
+
+  /// The word cancel
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel'**
+  String get closeEditorWarningCancelBtn;
+
+  /// Explicit detailed message for close project dialog
+  ///
+  /// In en, this message translates to:
+  /// **'Are you sure you want to close the Image Editor? Your changes will \n not be saved.'**
+  String get closeEditorWarningMessage;
+
+  /// Explicit title for close project dialog
+  ///
+  /// In en, this message translates to:
+  /// **'Close Image Editor?'**
+  String get closeEditorWarningTitle;
 
   /// The word create
   ///
@@ -269,6 +299,18 @@ abstract class AppLocalizations {
   /// **'Documentation'**
   String get documentation;
 
+  /// The word done
+  ///
+  /// In en, this message translates to:
+  /// **'Done'**
+  String get done;
+
+  /// The message displayed in the loading dialog
+  ///
+  /// In en, this message translates to:
+  /// **'Changes are being applied'**
+  String get doneLoadingMsg;
+
   /// The message displayed when the user can drag an image to the app
   ///
   /// In en, this message translates to:
@@ -281,11 +323,29 @@ abstract class AppLocalizations {
   /// **'Edit'**
   String get edit;
 
+  /// The word eraser
+  ///
+  /// In en, this message translates to:
+  /// **'Eraser'**
+  String get eraser;
+
   /// The word export
   ///
   /// In en, this message translates to:
   /// **'Export'**
   String get export;
+
+  /// The word filter
+  ///
+  /// In en, this message translates to:
+  /// **'Filter'**
+  String get filterBottomNavigationBarText;
+
+  /// The word free style
+  ///
+  /// In en, this message translates to:
+  /// **'Free Style'**
+  String get freestyle;
 
   /// The word generate
   ///
@@ -316,6 +376,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Import'**
   String get import;
+
+  /// The addres in the IP v4 format
+  ///
+  /// In en, this message translates to:
+  /// **'IPv4 Address'**
+  String get ipv4;
+
+  /// The addres in the IP v6 format
+  ///
+  /// In en, this message translates to:
+  /// **'IPv6 Address'**
+  String get ipv6;
 
   /// The title of 2D workspace page
   ///
@@ -383,6 +455,30 @@ abstract class AppLocalizations {
   /// **'When this is enabled a button for changing the language quickly is displayed in the window bar'**
   String get layoutEnableLangInfo;
 
+  /// The word line
+  ///
+  /// In en, this message translates to:
+  /// **'Line'**
+  String get line;
+
+  /// The message displayed in the loading dialog
+  ///
+  /// In en, this message translates to:
+  /// **'Please wait...'**
+  String get loadingDialogMsg;
+
+  /// The location. It is deduced from the IP address
+  ///
+  /// In en, this message translates to:
+  /// **'Location'**
+  String get location;
+
+  /// Cellular data. It is used as word for settings category when cellular data is turned on
+  ///
+  /// In en, this message translates to:
+  /// **'Mobile Data'**
+  String get mobileData;
+
   /// Models used as word for settings category
   ///
   /// In en, this message translates to:
@@ -431,6 +527,12 @@ abstract class AppLocalizations {
   /// **'No'**
   String get no;
 
+  /// The message displayed when there is no connection
+  ///
+  /// In en, this message translates to:
+  /// **'No connection'**
+  String get noConnection;
+
   /// The message displayed when there are no projects
   ///
   /// In en, this message translates to:
@@ -449,11 +551,29 @@ abstract class AppLocalizations {
   /// **'Open Project'**
   String get openProject;
 
+  /// The word paint
+  ///
+  /// In en, this message translates to:
+  /// **'Paint'**
+  String get pebottomNavigationBarText;
+
+  /// Used to ping the server in the settings page
+  ///
+  /// In en, this message translates to:
+  /// **'Ping the server'**
+  String get pingTheServer;
+
   ///
   ///
   /// In en, this message translates to:
   /// **'Primary Font'**
   String get primaryFont;
+
+  /// The word process
+  ///
+  /// In en, this message translates to:
+  /// **'Process'**
+  String get process;
 
   /// The word project
   ///
@@ -485,6 +605,12 @@ abstract class AppLocalizations {
   /// **'Project type'**
   String get projectType;
 
+  /// The word rectangle
+  ///
+  /// In en, this message translates to:
+  /// **'Rectangle'**
+  String get rectangle;
+
   /// The word redo
   ///
   /// In en, this message translates to:
@@ -496,24 +622,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Rename'**
   String get rename;
-
-  /// Used in the appearance section as SettingsGroup title
-  ///
-  /// In en, this message translates to:
-  /// **'Theme Customization'**
-  String get themeCustomization;
-
-  /// Used in the appearance section in the Theme Customization group
-  ///
-  /// In en, this message translates to:
-  /// **'Primary Theme Selection'**
-  String get themeSelection;
-
-  /// Used in the appearance section in the Typography & Readability
-  ///
-  /// In en, this message translates to:
-  /// **'Typography & Readability'**
-  String get typographyAndReadability;
 
   /// Used as placeholder for search bar
   ///
@@ -532,6 +640,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'{count, plural, other{{count} selected} zero{None selected} one{1 selected}}'**
   String selectedCount(int count);
+
+  /// The word self network
+  ///
+  /// In en, this message translates to:
+  /// **'Personal Network'**
+  String get selfNetwork;
+
+  /// The description of the self network
+  ///
+  /// In en, this message translates to:
+  /// **'The network of the user'**
+  String get selfNetworkDesc;
 
   /// Server in context of settings page
   ///
@@ -557,17 +677,53 @@ abstract class AppLocalizations {
   /// **'Settings'**
   String get settings;
 
+  /// The status of the server ping
+  ///
+  /// In en, this message translates to:
+  /// **'{status}'**
+  String serverPingStatus(String status);
+
   /// The title of the statistics page
   ///
   /// In en, this message translates to:
   /// **'Statistics View'**
   String get statisticsView;
 
+  /// The message displayed when the user can ping the server
+  ///
+  /// In en, this message translates to:
+  /// **'Tap the circle to ping'**
+  String get tapTheCircleToPing;
+
   /// The title of the tool properties page
   ///
   /// In en, this message translates to:
   /// **'Tool Properties'**
   String get toolProperties;
+
+  /// Used in the appearance section as SettingsGroup title
+  ///
+  /// In en, this message translates to:
+  /// **'Theme Customization'**
+  String get themeCustomization;
+
+  /// Used in the appearance section in the Theme Customization group
+  ///
+  /// In en, this message translates to:
+  /// **'Primary Theme Selection'**
+  String get themeSelection;
+
+  /// The word filter
+  ///
+  /// In en, this message translates to:
+  /// **'Tune'**
+  String get tuneBottomNavigationBarText;
+
+  /// Used in the appearance section in the Typography & Readability
+  ///
+  /// In en, this message translates to:
+  /// **'Typography & Readability'**
+  String get typographyAndReadability;
 
   /// The word undo
   ///

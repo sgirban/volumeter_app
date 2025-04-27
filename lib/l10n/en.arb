@@ -34,6 +34,10 @@
     },
     "appearanceDesc": "Interface customization",
     "@appearanceDesc": {},
+    "arrow": "Arrow",
+    "@arrow": {
+        "description": "The word arrow"
+    },
     "assets": "Assets",
     "@assets": {
         "description": "The word assets"
@@ -50,9 +54,25 @@
     "@cancel": {
         "description": "The word cancel"
     },
+    "circle": "Circle",
+    "@circle": {
+        "description": "The word circle"
+    },
     "close": "Close",
     "@close": {
         "description": "The word close"
+    },
+    "closeEditorWarningCancelBtn": "Cancel",
+    "@closeEditorWarningCancelBtn": {
+        "description": "The word cancel"
+    },
+    "closeEditorWarningMessage": "Are you sure you want to close the Image Editor? Your changes will \n not be saved.",
+    "@closeEditorWarningMessage": {
+        "description": "Explicit detailed message for close project dialog"
+    },
+    "closeEditorWarningTitle": "Close Image Editor?",
+    "@closeEditorWarningTitle": {
+        "description": "Explicit title for close project dialog"
     },
     "create": "Create",
     "@create": {
@@ -116,6 +136,14 @@
     "@documentation": {
         "description": "The word documentation"
     },
+    "done": "Done",
+    "@done": {
+        "description": "The word done"
+    },
+    "doneLoadingMsg": "Changes are being applied",
+    "@doneLoadingMsg": {
+        "description": "The message displayed in the loading dialog"
+    },
     "dragImageHere": "Drag image here, or",
     "@dragImageHere": {
         "description": "The message displayed when the user can drag an image to the app"
@@ -124,9 +152,21 @@
     "@edit": {
         "description": "The word edit"
     },
+    "eraser": "Eraser",
+    "@eraser": {
+        "description": "The word eraser"
+    },
     "export": "Export",
     "@export": {
         "description": "The word export"
+    },
+    "filterBottomNavigationBarText": "Filter",
+    "@filterBottomNavigationBarText": {
+        "description": "The word filter"
+    },
+    "freestyle": "Free Style",
+    "@freestyle": {
+        "description": "The word free style"
     },
     "generate": "Generate",
     "@generate": {
@@ -147,6 +187,14 @@
     "import": "Import",
     "@import": {
         "description": "The word import"
+    },
+    "ipv4": "IPv4 Address",
+    "@ipv4": {
+        "description": "The addres in the IP v4 format"
+    },
+    "ipv6": "IPv6 Address",
+    "@ipv6": {
+        "description": "The addres in the IP v6 format"
     },
     "k2DWorkspace": "2D Workspace",
     "@k2DWorkspace": {
@@ -190,6 +238,22 @@
     "@layoutEnableLang": {},
     "layoutEnableLangInfo": "When this is enabled a button for changing the language quickly is displayed in the window bar",
     "@layoutEnableLangInfo": {},
+    "line": "Line",
+    "@line": {
+        "description": "The word line"
+    },
+    "loadingDialogMsg": "Please wait...",
+    "@loadingDialogMsg": {
+        "description": "The message displayed in the loading dialog"
+    },
+    "location": "Location",
+    "@location": {
+        "description": "The location. It is deduced from the IP address"
+    },
+    "mobileData": "Mobile Data",
+    "@mobileData": {
+        "description": "Cellular data. It is used as word for settings category when cellular data is turned on"
+    },
     "models": "Models",
     "@models": {
         "description": "Models used as word for settings category"
@@ -220,6 +284,10 @@
     "@no": {
         "description": "The word no"
     },
+    "noConnection": "No connection",
+    "@noConnection": {
+        "description": "The message displayed when there is no connection"
+    },
     "noProjects": "No projects found",
     "@noProjects": {
         "description": "The message displayed when there are no projects"
@@ -232,9 +300,21 @@
     "@openProject": {
         "description": "The button title that aims to open a project"
     },
+    "pebottomNavigationBarText": "Paint",
+    "@pebottomNavigationBarText": {
+        "description": "The word paint"
+    },
+    "pingTheServer": "Ping the server",
+    "@pingTheServer": {
+        "description": "Used to ping the server in the settings page"
+    },
     "primaryFont": "Primary Font",
     "@primaryFont": {
         "description": ""
+    },
+    "process": "Process",
+    "@process": {
+        "description": "The word process"
     },
     "project": "Project",
     "@project": {
@@ -256,6 +336,10 @@
     "@projectType": {
         "description": "The title of the project type field"
     },
+    "rectangle": "Rectangle",
+    "@rectangle": {
+        "description": "The word rectangle"
+    },
     "redo": "Redo",
     "@redo": {
         "description": "The word redo"
@@ -263,18 +347,6 @@
     "rename": "Rename",
     "@rename": {
         "description": "The word rename"
-    },
-    "themeCustomization": "Theme Customization",
-    "@themeCustomization": {
-        "description": "Used in the appearance section as SettingsGroup title"
-    },
-    "themeSelection": "Primary Theme Selection",
-    "@themeSelection": {
-        "description": "Used in the appearance section in the Theme Customization group"
-    },
-    "typographyAndReadability": "Typography & Readability",
-    "@typographyAndReadability": {
-        "description": "Used in the appearance section in the Typography & Readability"
     },
     "search": "Search",
     "@search": {
@@ -294,6 +366,14 @@
         },
         "description": "The title of the selected items in the list"
     },
+    "selfNetwork": "Personal Network",
+    "@selfNetwork": {
+        "description": "The word self network"
+    },
+    "selfNetworkDesc": "The network of the user",
+    "@selfNetworkDesc": {
+        "description": "The description of the self network"
+    },
     "server": "Server",
     "@server": {
         "description": "Server in context of settings page"
@@ -308,13 +388,43 @@
     "@settings": {
         "description": "The settings section page where the user can be redirected"
     },
+    "serverPingStatus": "{status}",
+    "@serverPingStatus": {
+        "placeholders": {
+            "status": {
+                "type": "String",
+                "example": "Online"
+            }
+        },
+        "description": "The status of the server ping"
+    },
     "statisticsView": "Statistics View",
     "@statisticsView": {
         "description": "The title of the statistics page"
     },
+    "tapTheCircleToPing": "Tap the circle to ping",
+    "@tapTheCircleToPing": {
+        "description": "The message displayed when the user can ping the server"
+    },
     "toolProperties": "Tool Properties",
     "@toolProperties": {
         "description": "The title of the tool properties page"
+    },
+    "themeCustomization": "Theme Customization",
+    "@themeCustomization": {
+        "description": "Used in the appearance section as SettingsGroup title"
+    },
+    "themeSelection": "Primary Theme Selection",
+    "@themeSelection": {
+        "description": "Used in the appearance section in the Theme Customization group"
+    },
+    "tuneBottomNavigationBarText": "Tune",
+    "@tuneBottomNavigationBarText": {
+        "description": "The word filter"
+    },
+    "typographyAndReadability": "Typography & Readability",
+    "@typographyAndReadability": {
+        "description": "Used in the appearance section in the Typography & Readability"
     },
     "undo": "Undo",
     "@undo": {

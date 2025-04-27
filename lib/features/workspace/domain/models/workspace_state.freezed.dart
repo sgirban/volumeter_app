@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$WorkspaceState {
 
- String get workspacePath; ProjectMetadata get project; Set<String> get selectedAsset;
+ String get workspacePath; ProjectMetadata get project; WorkspaceViewType get viewType; Set<String> get selectedAsset;
 /// Create a copy of WorkspaceState
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -26,16 +26,16 @@ $WorkspaceStateCopyWith<WorkspaceState> get copyWith => _$WorkspaceStateCopyWith
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is WorkspaceState&&(identical(other.workspacePath, workspacePath) || other.workspacePath == workspacePath)&&(identical(other.project, project) || other.project == project)&&const DeepCollectionEquality().equals(other.selectedAsset, selectedAsset));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is WorkspaceState&&(identical(other.workspacePath, workspacePath) || other.workspacePath == workspacePath)&&(identical(other.project, project) || other.project == project)&&(identical(other.viewType, viewType) || other.viewType == viewType)&&const DeepCollectionEquality().equals(other.selectedAsset, selectedAsset));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,workspacePath,project,const DeepCollectionEquality().hash(selectedAsset));
+int get hashCode => Object.hash(runtimeType,workspacePath,project,viewType,const DeepCollectionEquality().hash(selectedAsset));
 
 @override
 String toString() {
-  return 'WorkspaceState(workspacePath: $workspacePath, project: $project, selectedAsset: $selectedAsset)';
+  return 'WorkspaceState(workspacePath: $workspacePath, project: $project, viewType: $viewType, selectedAsset: $selectedAsset)';
 }
 
 
@@ -46,7 +46,7 @@ abstract mixin class $WorkspaceStateCopyWith<$Res>  {
   factory $WorkspaceStateCopyWith(WorkspaceState value, $Res Function(WorkspaceState) _then) = _$WorkspaceStateCopyWithImpl;
 @useResult
 $Res call({
- String workspacePath, ProjectMetadata project, Set<String> selectedAsset
+ String workspacePath, ProjectMetadata project, WorkspaceViewType viewType, Set<String> selectedAsset
 });
 
 
@@ -63,11 +63,12 @@ class _$WorkspaceStateCopyWithImpl<$Res>
 
 /// Create a copy of WorkspaceState
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? workspacePath = null,Object? project = null,Object? selectedAsset = null,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? workspacePath = null,Object? project = null,Object? viewType = null,Object? selectedAsset = null,}) {
   return _then(_self.copyWith(
 workspacePath: null == workspacePath ? _self.workspacePath : workspacePath // ignore: cast_nullable_to_non_nullable
 as String,project: null == project ? _self.project : project // ignore: cast_nullable_to_non_nullable
-as ProjectMetadata,selectedAsset: null == selectedAsset ? _self.selectedAsset : selectedAsset // ignore: cast_nullable_to_non_nullable
+as ProjectMetadata,viewType: null == viewType ? _self.viewType : viewType // ignore: cast_nullable_to_non_nullable
+as WorkspaceViewType,selectedAsset: null == selectedAsset ? _self.selectedAsset : selectedAsset // ignore: cast_nullable_to_non_nullable
 as Set<String>,
   ));
 }
@@ -88,11 +89,12 @@ $ProjectMetadataCopyWith<$Res> get project {
 
 
 class _WorkspaceState implements WorkspaceState {
-  const _WorkspaceState({required this.workspacePath, required this.project, final  Set<String> selectedAsset = const {}}): _selectedAsset = selectedAsset;
+  const _WorkspaceState({required this.workspacePath, required this.project, this.viewType = WorkspaceViewType.view2D, final  Set<String> selectedAsset = const <String>{}}): _selectedAsset = selectedAsset;
   
 
 @override final  String workspacePath;
 @override final  ProjectMetadata project;
+@override@JsonKey() final  WorkspaceViewType viewType;
  final  Set<String> _selectedAsset;
 @override@JsonKey() Set<String> get selectedAsset {
   if (_selectedAsset is EqualUnmodifiableSetView) return _selectedAsset;
@@ -111,16 +113,16 @@ _$WorkspaceStateCopyWith<_WorkspaceState> get copyWith => __$WorkspaceStateCopyW
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _WorkspaceState&&(identical(other.workspacePath, workspacePath) || other.workspacePath == workspacePath)&&(identical(other.project, project) || other.project == project)&&const DeepCollectionEquality().equals(other._selectedAsset, _selectedAsset));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _WorkspaceState&&(identical(other.workspacePath, workspacePath) || other.workspacePath == workspacePath)&&(identical(other.project, project) || other.project == project)&&(identical(other.viewType, viewType) || other.viewType == viewType)&&const DeepCollectionEquality().equals(other._selectedAsset, _selectedAsset));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,workspacePath,project,const DeepCollectionEquality().hash(_selectedAsset));
+int get hashCode => Object.hash(runtimeType,workspacePath,project,viewType,const DeepCollectionEquality().hash(_selectedAsset));
 
 @override
 String toString() {
-  return 'WorkspaceState(workspacePath: $workspacePath, project: $project, selectedAsset: $selectedAsset)';
+  return 'WorkspaceState(workspacePath: $workspacePath, project: $project, viewType: $viewType, selectedAsset: $selectedAsset)';
 }
 
 
@@ -131,7 +133,7 @@ abstract mixin class _$WorkspaceStateCopyWith<$Res> implements $WorkspaceStateCo
   factory _$WorkspaceStateCopyWith(_WorkspaceState value, $Res Function(_WorkspaceState) _then) = __$WorkspaceStateCopyWithImpl;
 @override @useResult
 $Res call({
- String workspacePath, ProjectMetadata project, Set<String> selectedAsset
+ String workspacePath, ProjectMetadata project, WorkspaceViewType viewType, Set<String> selectedAsset
 });
 
 
@@ -148,11 +150,12 @@ class __$WorkspaceStateCopyWithImpl<$Res>
 
 /// Create a copy of WorkspaceState
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? workspacePath = null,Object? project = null,Object? selectedAsset = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? workspacePath = null,Object? project = null,Object? viewType = null,Object? selectedAsset = null,}) {
   return _then(_WorkspaceState(
 workspacePath: null == workspacePath ? _self.workspacePath : workspacePath // ignore: cast_nullable_to_non_nullable
 as String,project: null == project ? _self.project : project // ignore: cast_nullable_to_non_nullable
-as ProjectMetadata,selectedAsset: null == selectedAsset ? _self._selectedAsset : selectedAsset // ignore: cast_nullable_to_non_nullable
+as ProjectMetadata,viewType: null == viewType ? _self.viewType : viewType // ignore: cast_nullable_to_non_nullable
+as WorkspaceViewType,selectedAsset: null == selectedAsset ? _self._selectedAsset : selectedAsset // ignore: cast_nullable_to_non_nullable
 as Set<String>,
   ));
 }

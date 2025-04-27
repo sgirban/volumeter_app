@@ -33,6 +33,9 @@ class AppLocalizationsRo extends AppLocalizations {
   String get appearanceDesc => 'Personalizare interfață';
 
   @override
+  String get arrow => 'Săgeată';
+
+  @override
   String get assets => 'Resurse';
 
   @override
@@ -45,7 +48,19 @@ class AppLocalizationsRo extends AppLocalizations {
   String get cancel => 'Anulează';
 
   @override
+  String get circle => 'Cerc';
+
+  @override
   String get close => 'Închide';
+
+  @override
+  String get closeEditorWarningCancelBtn => 'Anulează';
+
+  @override
+  String get closeEditorWarningMessage => 'Sigur dorești să inchizi editorul de imagini? Modificările nu\n vor fi salvate.';
+
+  @override
+  String get closeEditorWarningTitle => 'Vrei să închizi editorul de imagini?';
 
   @override
   String get create => 'Crează';
@@ -96,13 +111,28 @@ class AppLocalizationsRo extends AppLocalizations {
   String get documentation => 'Manual de utilizare';
 
   @override
+  String get done => 'Gata';
+
+  @override
+  String get doneLoadingMsg => 'Se aplică modificările';
+
+  @override
   String get dragImageHere => 'Trage imaginea aici, sau';
 
   @override
   String get edit => 'Editează';
 
   @override
+  String get eraser => 'Radieră';
+
+  @override
   String get export => 'Exportă';
+
+  @override
+  String get filterBottomNavigationBarText => 'Filtru';
+
+  @override
+  String get freestyle => 'Desenează liber';
 
   @override
   String get generate => 'Generează';
@@ -118,6 +148,12 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get import => 'Importă';
+
+  @override
+  String get ipv4 => 'Adresă IPv4';
+
+  @override
+  String get ipv6 => 'Adresă IPv6';
 
   @override
   String get k2DWorkspace => 'Spațiu 2D';
@@ -162,6 +198,18 @@ class AppLocalizationsRo extends AppLocalizations {
   String get layoutEnableLangInfo => 'Atunci când această opțiune este activată, un buton pentru schimbarea a limbii va aparăea în bara ferestrei';
 
   @override
+  String get line => 'Linie';
+
+  @override
+  String get loadingDialogMsg => 'Se încarcă...';
+
+  @override
+  String get location => 'Locație';
+
+  @override
+  String get mobileData => 'Date mobile';
+
+  @override
   String get models => 'Modele';
 
   @override
@@ -186,6 +234,9 @@ class AppLocalizationsRo extends AppLocalizations {
   String get no => 'Nu';
 
   @override
+  String get noConnection => 'Nu există conexiune';
+
+  @override
   String get noProjects => 'Nu există proiecte';
 
   @override
@@ -195,7 +246,16 @@ class AppLocalizationsRo extends AppLocalizations {
   String get openProject => 'Deschide proiect';
 
   @override
+  String get pebottomNavigationBarText => 'Desenează';
+
+  @override
+  String get pingTheServer => 'Ping server';
+
+  @override
   String get primaryFont => 'Font principal';
+
+  @override
+  String get process => 'Procesare';
 
   @override
   String get project => 'Proiect';
@@ -213,19 +273,13 @@ class AppLocalizationsRo extends AppLocalizations {
   String get projectType => 'Tip proiect';
 
   @override
-  String get redo => 'Redo';
+  String get rectangle => 'Dreptunghi';
+
+  @override
+  String get redo => 'Refă';
 
   @override
   String get rename => 'Renumește';
-
-  @override
-  String get themeCustomization => 'Configurare temă';
-
-  @override
-  String get themeSelection => 'Selectează tema principală';
-
-  @override
-  String get typographyAndReadability => 'Text & Lizibilitate';
 
   @override
   String get search => 'Caută';
@@ -245,6 +299,12 @@ class AppLocalizationsRo extends AppLocalizations {
   }
 
   @override
+  String get selfNetwork => 'Rețea internă';
+
+  @override
+  String get selfNetworkDesc => 'Configurare rețea internă';
+
+  @override
   String get server => 'Server';
 
   @override
@@ -257,10 +317,30 @@ class AppLocalizationsRo extends AppLocalizations {
   String get settings => 'Setări';
 
   @override
+  String serverPingStatus(String status) {
+    return '$status';
+  }
+
+  @override
   String get statisticsView => 'Vizualizare statistică';
 
   @override
+  String get tapTheCircleToPing => 'Atinge cercul pentru a verifica conexiunea';
+
+  @override
   String get toolProperties => 'Configurari tool';
+
+  @override
+  String get themeCustomization => 'Configurare temă';
+
+  @override
+  String get themeSelection => 'Selectează tema principală';
+
+  @override
+  String get tuneBottomNavigationBarText => 'Ajustează';
+
+  @override
+  String get typographyAndReadability => 'Text & Lizibilitate';
 
   @override
   String get undo => 'Anulează';

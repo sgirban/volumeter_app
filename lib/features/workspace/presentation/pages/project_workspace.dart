@@ -4,16 +4,17 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_resizable_container/flutter_resizable_container.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:tab_container/tab_container.dart';
 import 'package:volumeter/core/adaptive/platform/platform_detector.dart';
 import 'package:volumeter/core/adaptive/widgets/adaptive_dialog.dart';
 import 'package:volumeter/core/constants/app_numbers.dart';
 import 'package:volumeter/core/extensions/context_extension.dart';
+import 'package:volumeter/core/grpc/grpc_client.dart';
 import 'package:volumeter/core/utils/project/assets_utils.dart';
-import 'package:volumeter/features/workspace/presentation/panels/desktop_side_pannel.dart';
+import 'package:volumeter/features/workspace/domain/models/workspace_view_type.dart';
 import 'package:volumeter/features/workspace/presentation/widgets/asset_pannel.dart';
 import 'package:volumeter/features/workspace/presentation/widgets/assets_generate_menu.dart';
 import 'package:volumeter/features/workspace/presentation/widgets/file_import_zone.dart';
+import 'package:volumeter/features/workspace/presentation/widgets/workspace_2d_view.dart';
 import 'package:volumeter/providers/assets_provider.dart';
 import 'package:volumeter/providers/theme_provider.dart';
 import 'package:volumeter/providers/workspace_provider.dart';
@@ -283,13 +284,32 @@ class _ProjectWorkspaceState extends ConsumerState<ProjectWorkspace> {
             ),
 
             const Spacer(),
-            fluent.FilledButton(
-              onPressed: () {},
-              style: const fluent.ButtonStyle(
-                backgroundColor: WidgetStatePropertyAll(Colors.green),
+            if (ref.read(assetsProvider).isNotEmpty)
+              fluent.FilledButton(
+                onPressed: () async {
+                  //compressProject(ref.read(workspaceProvider).project);
+                  final client = GrpcClient();
+                  client.ping().then(
+                    (value) => debugPrint('Pring status: $value'),
+                  );
+                },
+                style: const fluent.ButtonStyle(
+                  backgroundColor: WidgetStatePropertyAll(Colors.green),
+                ),
+                child: Text(localizations.process),
               ),
-              child: const Text('Process'),
-            ),
+            if (ref.read(assetsProvider).isEmpty)
+              AbsorbPointer(
+                child: fluent.FilledButton(
+                  onPressed: () {},
+                  style: const fluent.ButtonStyle(
+                    backgroundColor: WidgetStatePropertyAll(
+                      fluent.Color.fromARGB(136, 88, 88, 88),
+                    ),
+                  ),
+                  child: Text(localizations.process),
+                ),
+              ),
             const SizedBox(width: 8),
           ],
         ),
@@ -333,46 +353,15 @@ class _ProjectWorkspaceState extends ConsumerState<ProjectWorkspace> {
         markWidth: 5,
         markPosition: 0.8,
         drawerColor: const fluent.Color.fromARGB(255, 125, 125, 125),
-        mainChild: const Column(children: [Text('MAIN content')]),
+        mainChild: _buildView(context),
         drawerChild: Stack(
           children: [
-            fluent.Padding(
-              padding: const EdgeInsets.all(8.0),
+            const fluent.Padding(
+              padding: EdgeInsets.all(8.0),
               child: Column(
                 children: [
                   /// Tabs
-                  Expanded(
-                    child: TabContainer(
-                      tabsStart: 0.1,
-                      tabsEnd: 0.9,
-                      tabExtent: 50,
-                      tabMinLength: 100,
-                      tabEdge: TabEdge.top,
-                      borderRadius: BorderRadius.circular(10),
-                      tabBorderRadius: BorderRadius.circular(10),
-                      color: colors.surface,
-                      childPadding: const EdgeInsets.symmetric(
-                        horizontal: 8.0,
-                        vertical: 8.0,
-                      ),
-                      selectedTextStyle: Theme.of(context).textTheme.bodyMedium
-                          ?.copyWith(fontSize: 15, color: colors.primary),
-                      unselectedTextStyle: Theme.of(
-                        context,
-                      ).textTheme.bodyMedium?.copyWith(fontSize: 13),
-
-                      tabs: [
-                        Text(context.localizations.assets),
-                        Text(context.localizations.toolProperties),
-                      ],
-                      children: [
-                        const AssetPannel(),
-                        fluent.Column(
-                          children: [Container(child: Text('Child 2'))],
-                        ),
-                      ],
-                    ),
-                  ),
+                  Expanded(child: AssetPannel()),
                 ],
               ),
             ),
@@ -396,13 +385,42 @@ class _ProjectWorkspaceState extends ConsumerState<ProjectWorkspace> {
   }
 
   Widget _buildView(BuildContext context) {
+    if (ref.watch(workspaceProvider.select((s) => s.viewType)) ==
+        WorkspaceViewType.view2D) {
+      if (isDesktopWeb) {
+        return const Workspace2dView();
+      } else {
+        return Stack(
+          children: [
+            const Workspace2dView(),
+            Positioned(
+              top: 15,
+              right: 15,
+              child: FilledButton(
+                onPressed: () async {
+                  //compressProject(ref.read(workspaceProvider).project);
+                  final client = GrpcClient();
+                  client.ping().then(
+                    (value) => debugPrint('Pring status: $value'),
+                  );
+                },
+                style: const ButtonStyle(
+                  backgroundColor: WidgetStatePropertyAll(Colors.green),
+                ),
+                child: Text(context.localizations.process),
+              ),
+            ),
+          ],
+        );
+      }
+    }
     return Container(color: Colors.red);
   }
 
   Widget _buildSidePanel(BuildContext context) {
     if (isDesktopWeb) {
       if (_isPannelVisible) {
-        return const DesktopSidePannel();
+        return const AssetPannel();
       } else {
         return const SizedBox.shrink();
       }

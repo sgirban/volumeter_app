@@ -20,6 +20,11 @@ Future<List<ImageAsset>> loadAssets(ProjectMetadata project) async {
   return assets;
 }
 
+Future<void> updateAsset(ImageAsset asset, Uint8List bytes) async {
+  final file = File(asset.path);
+  await file.writeAsBytes(bytes);
+}
+
 Future<void> updateAssetsManifest(Map<String, dynamic> args) async {
   final project = args['project'] as ProjectMetadata;
   final assets = args['assets'] as ImageAsset;

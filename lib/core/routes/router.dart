@@ -7,6 +7,7 @@ import 'package:volumeter/features/home/presentation/pages/home_page.dart';
 import 'package:volumeter/features/projects/presentation/pages/projects_page.dart';
 import 'package:volumeter/features/settings/presentation/pages/settings_appearance.dart';
 import 'package:volumeter/features/settings/presentation/pages/settings_page.dart';
+import 'package:volumeter/features/settings/presentation/pages/settings_server.dart';
 import 'package:volumeter/features/workspace/presentation/pages/project_workspace.dart';
 
 final rootNavigatorKey = GlobalKey<NavigatorState>();
@@ -62,6 +63,10 @@ final router = GoRouter(
                   scrollToSection: fragment.isNotEmpty ? fragment : null,
                 );
               },
+            ),
+            GoRoute(
+              path: 'server',
+              builder: (context, state) => const SettingsServer(),
             ),
           ],
         ),

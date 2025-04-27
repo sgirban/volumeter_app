@@ -33,6 +33,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get appearanceDesc => 'Interface customization';
 
   @override
+  String get arrow => 'Arrow';
+
+  @override
   String get assets => 'Assets';
 
   @override
@@ -45,7 +48,19 @@ class AppLocalizationsEn extends AppLocalizations {
   String get cancel => 'Cancel';
 
   @override
+  String get circle => 'Circle';
+
+  @override
   String get close => 'Close';
+
+  @override
+  String get closeEditorWarningCancelBtn => 'Cancel';
+
+  @override
+  String get closeEditorWarningMessage => 'Are you sure you want to close the Image Editor? Your changes will \n not be saved.';
+
+  @override
+  String get closeEditorWarningTitle => 'Close Image Editor?';
 
   @override
   String get create => 'Create';
@@ -96,13 +111,28 @@ class AppLocalizationsEn extends AppLocalizations {
   String get documentation => 'Documentation';
 
   @override
+  String get done => 'Done';
+
+  @override
+  String get doneLoadingMsg => 'Changes are being applied';
+
+  @override
   String get dragImageHere => 'Drag image here, or';
 
   @override
   String get edit => 'Edit';
 
   @override
+  String get eraser => 'Eraser';
+
+  @override
   String get export => 'Export';
+
+  @override
+  String get filterBottomNavigationBarText => 'Filter';
+
+  @override
+  String get freestyle => 'Free Style';
 
   @override
   String get generate => 'Generate';
@@ -118,6 +148,12 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get import => 'Import';
+
+  @override
+  String get ipv4 => 'IPv4 Address';
+
+  @override
+  String get ipv6 => 'IPv6 Address';
 
   @override
   String get k2DWorkspace => '2D Workspace';
@@ -162,6 +198,18 @@ class AppLocalizationsEn extends AppLocalizations {
   String get layoutEnableLangInfo => 'When this is enabled a button for changing the language quickly is displayed in the window bar';
 
   @override
+  String get line => 'Line';
+
+  @override
+  String get loadingDialogMsg => 'Please wait...';
+
+  @override
+  String get location => 'Location';
+
+  @override
+  String get mobileData => 'Mobile Data';
+
+  @override
   String get models => 'Models';
 
   @override
@@ -186,6 +234,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get no => 'No';
 
   @override
+  String get noConnection => 'No connection';
+
+  @override
   String get noProjects => 'No projects found';
 
   @override
@@ -195,7 +246,16 @@ class AppLocalizationsEn extends AppLocalizations {
   String get openProject => 'Open Project';
 
   @override
+  String get pebottomNavigationBarText => 'Paint';
+
+  @override
+  String get pingTheServer => 'Ping the server';
+
+  @override
   String get primaryFont => 'Primary Font';
+
+  @override
+  String get process => 'Process';
 
   @override
   String get project => 'Project';
@@ -213,19 +273,13 @@ class AppLocalizationsEn extends AppLocalizations {
   String get projectType => 'Project type';
 
   @override
+  String get rectangle => 'Rectangle';
+
+  @override
   String get redo => 'Redo';
 
   @override
   String get rename => 'Rename';
-
-  @override
-  String get themeCustomization => 'Theme Customization';
-
-  @override
-  String get themeSelection => 'Primary Theme Selection';
-
-  @override
-  String get typographyAndReadability => 'Typography & Readability';
 
   @override
   String get search => 'Search';
@@ -246,6 +300,12 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
+  String get selfNetwork => 'Personal Network';
+
+  @override
+  String get selfNetworkDesc => 'The network of the user';
+
+  @override
   String get server => 'Server';
 
   @override
@@ -258,10 +318,30 @@ class AppLocalizationsEn extends AppLocalizations {
   String get settings => 'Settings';
 
   @override
+  String serverPingStatus(String status) {
+    return '$status';
+  }
+
+  @override
   String get statisticsView => 'Statistics View';
 
   @override
+  String get tapTheCircleToPing => 'Tap the circle to ping';
+
+  @override
   String get toolProperties => 'Tool Properties';
+
+  @override
+  String get themeCustomization => 'Theme Customization';
+
+  @override
+  String get themeSelection => 'Primary Theme Selection';
+
+  @override
+  String get tuneBottomNavigationBarText => 'Tune';
+
+  @override
+  String get typographyAndReadability => 'Typography & Readability';
 
   @override
   String get undo => 'Undo';
