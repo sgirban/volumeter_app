@@ -22,7 +22,6 @@ class RipplePainter extends CustomPainter {
             ..color = color.withOpacity(oppacity * 0.5)
             ..style = PaintingStyle.stroke
             ..strokeWidth = 4.0
-      //..maskFilter = const MaskFilter.blur(BlurStyle.normal, 10.0);
       ;
       canvas.drawCircle(cenetr, radius, paint);
     }
