@@ -8,6 +8,7 @@ import 'package:volumeter/features/projects/presentation/pages/projects_page.dar
 import 'package:volumeter/features/settings/presentation/pages/settings_appearance.dart';
 import 'package:volumeter/features/settings/presentation/pages/settings_page.dart';
 import 'package:volumeter/features/settings/presentation/pages/settings_server.dart';
+import 'package:volumeter/features/workspace/presentation/pages/processing_page.dart';
 import 'package:volumeter/features/workspace/presentation/pages/project_workspace.dart';
 
 final rootNavigatorKey = GlobalKey<NavigatorState>();
@@ -46,6 +47,12 @@ final router = GoRouter(
             GoRoute(
               path: 'workspace',
               builder: (context, state) => const ProjectWorkspace(),
+              routes: <GoRoute>[
+                GoRoute(
+                  path: 'processing',
+                  builder: (contex, state) => const ProcessingPage(),
+                ),
+              ],
             ),
           ],
         ),

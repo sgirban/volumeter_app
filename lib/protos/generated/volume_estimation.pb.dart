@@ -106,7 +106,7 @@ class ProjectChunk extends $pb.GeneratedMessage {
     $core.String? projectId,
     $core.List<$core.int>? chunkData,
     $core.int? chunkIndex,
-    $core.bool? isLastChunk,
+    $core.int? totalChunks,
   }) {
     final $result = create();
     if (projectId != null) {
@@ -118,8 +118,8 @@ class ProjectChunk extends $pb.GeneratedMessage {
     if (chunkIndex != null) {
       $result.chunkIndex = chunkIndex;
     }
-    if (isLastChunk != null) {
-      $result.isLastChunk = isLastChunk;
+    if (totalChunks != null) {
+      $result.totalChunks = totalChunks;
     }
     return $result;
   }
@@ -131,7 +131,7 @@ class ProjectChunk extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'projectId')
     ..a<$core.List<$core.int>>(2, _omitFieldNames ? '' : 'chunkData', $pb.PbFieldType.OY)
     ..a<$core.int>(3, _omitFieldNames ? '' : 'chunkIndex', $pb.PbFieldType.O3)
-    ..aOB(4, _omitFieldNames ? '' : 'isLastChunk')
+    ..a<$core.int>(4, _omitFieldNames ? '' : 'totalChunks', $pb.PbFieldType.O3)
     ..hasRequiredFields = false
   ;
 
@@ -184,13 +184,13 @@ class ProjectChunk extends $pb.GeneratedMessage {
   void clearChunkIndex() => $_clearField(3);
 
   @$pb.TagNumber(4)
-  $core.bool get isLastChunk => $_getBF(3);
+  $core.int get totalChunks => $_getIZ(3);
   @$pb.TagNumber(4)
-  set isLastChunk($core.bool v) { $_setBool(3, v); }
+  set totalChunks($core.int v) { $_setSignedInt32(3, v); }
   @$pb.TagNumber(4)
-  $core.bool hasIsLastChunk() => $_has(3);
+  $core.bool hasTotalChunks() => $_has(3);
   @$pb.TagNumber(4)
-  void clearIsLastChunk() => $_clearField(4);
+  void clearTotalChunks() => $_clearField(4);
 }
 
 class ProjectRequest extends $pb.GeneratedMessage {

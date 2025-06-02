@@ -20,4 +20,10 @@ class GrpcClient {
     final response = await client.ping(PingRequest());
     return response.isAvailable;
   }
+
+  Future<Stream<ProcessingStatus>> processProject(
+    Stream<ProjectChunk> chunks,
+  ) async {
+    return client.processProject(chunks).asBroadcastStream();
+  }
 }

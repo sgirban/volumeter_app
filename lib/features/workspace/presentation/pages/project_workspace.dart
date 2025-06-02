@@ -9,6 +9,7 @@ import 'package:volumeter/core/adaptive/widgets/adaptive_dialog.dart';
 import 'package:volumeter/core/constants/app_numbers.dart';
 import 'package:volumeter/core/extensions/context_extension.dart';
 import 'package:volumeter/core/grpc/grpc_client.dart';
+import 'package:volumeter/core/routes/router.dart';
 import 'package:volumeter/core/utils/project/assets_utils.dart';
 import 'package:volumeter/features/workspace/domain/models/workspace_view_type.dart';
 import 'package:volumeter/features/workspace/presentation/widgets/asset_pannel.dart';
@@ -287,11 +288,7 @@ class _ProjectWorkspaceState extends ConsumerState<ProjectWorkspace> {
             if (ref.read(assetsProvider).isNotEmpty)
               fluent.FilledButton(
                 onPressed: () async {
-                  //compressProject(ref.read(workspaceProvider).project);
-                  final client = GrpcClient();
-                  client.ping().then(
-                    (value) => debugPrint('Pring status: $value'),
-                  );
+                  router.push('/projects/workspace/processing');
                 },
                 style: const fluent.ButtonStyle(
                   backgroundColor: WidgetStatePropertyAll(Colors.green),

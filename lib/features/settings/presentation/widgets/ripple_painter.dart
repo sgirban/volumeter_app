@@ -1,5 +1,4 @@
 import 'dart:math' as math;
-
 import 'package:flutter/widgets.dart';
 
 class RipplePainter extends CustomPainter {
@@ -21,8 +20,7 @@ class RipplePainter extends CustomPainter {
             // ignore: deprecated_member_use
             ..color = color.withOpacity(oppacity * 0.5)
             ..style = PaintingStyle.stroke
-            ..strokeWidth = 4.0
-      ;
+            ..strokeWidth = 4.0;
       canvas.drawCircle(cenetr, radius, paint);
     }
   }

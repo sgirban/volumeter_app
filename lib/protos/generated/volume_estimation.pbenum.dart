@@ -19,6 +19,7 @@ class ProcessingStatus_Stage extends $pb.ProtobufEnum {
   static const ProcessingStatus_Stage OBJECT_DETECTION = ProcessingStatus_Stage._(2, _omitEnumNames ? '' : 'OBJECT_DETECTION');
   static const ProcessingStatus_Stage POISSON_PROCESSING = ProcessingStatus_Stage._(3, _omitEnumNames ? '' : 'POISSON_PROCESSING');
   static const ProcessingStatus_Stage COMPLETED = ProcessingStatus_Stage._(4, _omitEnumNames ? '' : 'COMPLETED');
+  static const ProcessingStatus_Stage FAILED = ProcessingStatus_Stage._(5, _omitEnumNames ? '' : 'FAILED');
 
   static const $core.List<ProcessingStatus_Stage> values = <ProcessingStatus_Stage> [
     UPLOADING,
@@ -26,6 +27,7 @@ class ProcessingStatus_Stage extends $pb.ProtobufEnum {
     OBJECT_DETECTION,
     POISSON_PROCESSING,
     COMPLETED,
+    FAILED,
   ];
 
   static final $core.Map<$core.int, ProcessingStatus_Stage> _byValue = $pb.ProtobufEnum.initByValue(values);

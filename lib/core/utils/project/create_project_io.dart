@@ -99,11 +99,10 @@ void _createDirectoryStructure({
   required ProjectMode mode,
 }) {
   final dirs = [
-    'config/thumbnails',
+    'config',
     'exports/processed',
     'temp',
-    if (mode.isRGB) 'assets/rgb/raw',
-    if (mode.isRGB) 'assets/rgb/edited',
+    if (mode.isRGB) 'assets/rgb',
     if (mode.isRGBD) 'assets/rgbd/rgb',
     if (mode.isRGBD) 'assets/rgbd/depth',
   ];
@@ -135,9 +134,11 @@ void _initializeConfigFiles(ProjectMetadata project) {
     '${project.path}/assets/assets_manifest.json',
   ).writeAsStringSync(jsonEncode(AssetsManifest(assets: []).toJson()));
 
-  File(
-    '${project.path}/config/server_config.json',
-  ).writeAsStringSync(jsonEncode({'server_name': 'Volumeter Server'}));
+  File('${project.path}/config/config.yaml').writeAsStringSync("""
+project_paths:
+  images_dir: /assets/rgb
+  output_dir: /exports/processed
+""");
 }
 
 void _generateInitialThumbnail(ProjectMetadata project) async {

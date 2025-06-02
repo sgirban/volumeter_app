@@ -69,7 +69,7 @@ Future<ImageAsset?> importAssets(File file, ProjectMetadata project) async {
     // Saving the image to the assets directory
     final assetsDirectory =
         project.mode.isRGB
-            ? Directory('${project.path}/assets/rgb/raw')
+            ? Directory('${project.path}/assets/rgb/')
             : Directory('${project.path}/assets/rgbd/rgb');
     final outputPath =
         '${assetsDirectory.path}/${file.uri.pathSegments.last.split('.').first}.png';
@@ -159,7 +159,7 @@ Future<ImageAsset?> importAssetsByDrag(
     // Saving the image to the assets directory
     final assetsDirectory =
         project.mode.isRGB
-            ? Directory('${project.path}/assets/rgb/raw')
+            ? Directory('${project.path}/assets/rgb')
             : Directory('${project.path}/assets/rgbd/rgb');
     final outputPath = '${assetsDirectory.path}/${name.split('.').first}.png';
     late final File outputFile;
@@ -268,7 +268,7 @@ Future<void> generateAsset({
   }
   final pngBytes = img.encodePng(image);
   final imgFile = File(
-    '${project.path}/assets/rgb/raw/${name.split('.').first}.png',
+    '${project.path}/assets/rgb/${name.split('.').first}.png',
   );
   await imgFile.writeAsBytes(pngBytes);
   updateAssetsManifest({

@@ -6,15 +6,19 @@ class FileChunker {
   static Stream<ProjectChunk> chunkFile(File file, String projectId) async* {
     final fileSize = await file.length();
     final totalChunks = (fileSize / chunkSize).ceil();
-    for (int i = 0; i < totalChunks; i++) {
-      final offset = i * chunkSize;
-      final chunk = await file.openRead(offset, offset + chunkSize).toList();
-      yield ProjectChunk(
-        projectId: projectId,
-        chunkData: chunk.first,
-        chunkIndex: i,
-        isLastChunk: i == totalChunks - 1,
-      );
+    final raf = await file.open(mode: FileMode.read);
+    try {
+      for (int i = 0; i < totalChunks; i++) {
+        final bytes = await raf.read(chunkSize);
+        yield ProjectChunk(
+          projectId: projectId,
+          chunkData: bytes,
+          chunkIndex: i,
+          totalChunks: totalChunks,
+        );
+      }
+    } finally {
+      await raf.close();
     }
   }
 }

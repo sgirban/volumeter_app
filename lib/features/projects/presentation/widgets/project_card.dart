@@ -197,14 +197,16 @@ class _ProjectCardState extends ConsumerState<ProjectCard>
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Text(
-                    context.localizations.lastUpdateStatus(
-                      DateTime.now()
-                          .difference(widget.project.updatedAt)
-                          .inDays,
+                  Flexible(
+                    child: Text(
+                      context.localizations.lastUpdateStatus(
+                        DateTime.now()
+                            .difference(widget.project.updatedAt)
+                            .inDays,
+                      ),
+                      overflow: TextOverflow.fade,
+                      style: Theme.of(context).textTheme.bodySmall,
                     ),
-                    overflow: TextOverflow.fade,
-                    style: Theme.of(context).textTheme.bodySmall,
                   ),
                   const Spacer(),
                   _statusBadge(context),
@@ -479,7 +481,6 @@ class _ProjectCardState extends ConsumerState<ProjectCard>
                       deleteProjectIO(widget.project);
                       Navigator.pop(context);
                     },
-
                     child: Text(context.localizations.yes),
                   )
                   : FilledButton(
@@ -532,6 +533,7 @@ class _ProjectCardState extends ConsumerState<ProjectCard>
         style: Theme.of(context).textTheme.bodySmall!.copyWith(
           color: statusLabelsColors[status],
           fontWeight: FontWeight.w500,
+          overflow: TextOverflow.ellipsis,
         ),
       ),
     );
