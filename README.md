@@ -9,6 +9,7 @@ trimise către un server backend pentru a putea fi procesate.
    * 2.1 [Dependințe](#21-Dependințe)
    * 2.2 [Obținerea codului](#22-Obținerea-codului)
    * 2.3 [Configurarea aplicației](#23-Configurarea-aplicației)
+   * 2.4 [Lansarea și rularea aplicației](#24-Lansarea-și-rularea-aplicației)
 ## 1. Prezentarea generală a sistemului
 Sistemul oferă o serie de etape ce pot fi urmate pentru a estima volumul din imagile încărcate de utilizatori.
 * **Aplicația client (în Flutter):** Se ocupă cu gestionarea, editarea și organizarea imaginilor ce trebuiesc procesate, dar și
@@ -35,4 +36,12 @@ Această secțiune detaliază procesul de configurare care trebuie urmat pentru 
 git clone https://github.com/sgirban/volumeter_app.git
 ```
 ### 2.3 Configurarea aplicației
-
+Navigați în directorul ce a fost copiat local în pasul anterior și descărcați pachetele necesare folosind comanda 
+ ```bash
+flutter pub get
+```
+### 2.4 Lansarea și rularea aplicației
+Pentru a complia și rula aplicația trebuie să folosiți comanda:
+ ```bash
+flutter run
+```
