@@ -12,6 +12,9 @@ trimise către un server backend pentru a putea fi procesate.
    * 2.4 [Lansarea și rularea aplicației](#24-Lansarea-și-rularea-aplicației)
 3. [Aplicația de pe server](#3-Aplicația-de-pe-server)
    * 3.1 [Dependințe](#31-Dependințe)
+   * 3.2 [Obținerea codului](#32-Obținerea-codului)
+   * 3.3 [Crearea unui evrionment de python](#33-Crearea-unui-evrionment-de-python)
+   * 3.4 [Pornirea aplicației server](#34-Pornirea-aplicației-server)
 ## 1. Prezentarea generală a sistemului
 Sistemul oferă o serie de etape ce pot fi urmate pentru a estima volumul din imagile încărcate de utilizatori.
 * **Aplicația client (în Flutter):** Se ocupă cu gestionarea, editarea și organizarea imaginilor ce trebuiesc procesate, dar și
@@ -58,4 +61,33 @@ flutter run
     * Pentru Colmap este foarte important să vă asigurați că executabilul este accesibil via PATH.
 * **Blender:** Blender este util atât pentru viuzalizarea datelor, dar și pentru a calcula mult mai precis volumul. Aplicația de server folosește câteva scripturi blender.
   * [Descarcă Blender](https://www.blender.org/download/)
-  
+### 3.2 Obținerea codului
+ Pentru a copia repository-ul local, pe dispozitivul dumeavoastră puteți folosi comanda:
+ ```git
+git clone https://github.com/sgirban/volumeter_server.git
+```
+### 3.3 Crearea unui evrionment de python
+```bash
+python3 -m venv venv
+```
+Mediul nou creat trebuie activat. Acest pas se realizează diferit în funcție de sistemul de operare:
+Pe Linux\MacOS:
+```bash
+source venv/bin/activate
+```
+Pe Windows:
+```bash
+ .\venv\Scripts\activate
+```
+Ulterior tebuie instalate toate dependențele 
+```bash
+pip install grpcio, numpy, scipy, pycolmap,Pillow, torch , torchvision, logger, pathlib
+```
+###  3.4 Pornirea aplicației server
+În interiorul directorul server se regăsește un fișier makefile. Acolo sunt definite target-uri pentru principalele operații:
+* Pentru pornirea serverului în **foreground**:
+  ```bash
+ make run
+```
+
+* Pentru pornirea serverului în **background**:
