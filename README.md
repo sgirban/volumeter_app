@@ -30,4 +30,7 @@ Această secțiune detaliază procesul de configurare care trebuie urmat pentru 
   * [Git Download](https://git-scm.com/downloads)
  ### 2.2 Obținerea codului
  Pentru a copia repository-ul local, pe dispozitivul dumeavoastră puteți folosi comanda:
+ ```git
+git clone https://github.com/[YourGitHubUsername]/[YourFlutterAppRepoName].git
+```
 
