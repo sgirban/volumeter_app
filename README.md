@@ -8,6 +8,7 @@ trimise către un server backend pentru a putea fi procesate.
 2. [Aplicația client](#2-Aplicația-client)
    * 2.1 [Dependințe](#21-Dependințe)
    * 2.2 [Obținerea codului](#22-Obținerea-codului)
+   * 2.3 [Configurarea aplicației](#23-Configurarea-aplicației)
 ## 1. Prezentarea generală a sistemului
 Sistemul oferă o serie de etape ce pot fi urmate pentru a estima volumul din imagile încărcate de utilizatori.
 * **Aplicația client (în Flutter):** Se ocupă cu gestionarea, editarea și organizarea imaginilor ce trebuiesc procesate, dar și
@@ -31,6 +32,7 @@ Această secțiune detaliază procesul de configurare care trebuie urmat pentru 
  ### 2.2 Obținerea codului
  Pentru a copia repository-ul local, pe dispozitivul dumeavoastră puteți folosi comanda:
  ```git
-git clone https://github.com/[YourGitHubUsername]/[YourFlutterAppRepoName].git
+git clone https://github.com/sgirban/volumeter_app.git
 ```
+### 2.3 Configurarea aplicației
 
