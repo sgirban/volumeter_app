@@ -11,6 +11,7 @@ trimise către un server backend pentru a putea fi procesate.
    * 2.3 [Configurarea aplicației](#23-Configurarea-aplicației)
    * 2.4 [Lansarea și rularea aplicației](#24-Lansarea-și-rularea-aplicației)
 3. [Aplicația de pe server](#3-Aplicația-de-pe-server)
+   * 3.1 [Dependințe](#31-Dependințe)
 ## 1. Prezentarea generală a sistemului
 Sistemul oferă o serie de etape ce pot fi urmate pentru a estima volumul din imagile încărcate de utilizatori.
 * **Aplicația client (în Flutter):** Se ocupă cu gestionarea, editarea și organizarea imaginilor ce trebuiesc procesate, dar și
@@ -48,3 +49,8 @@ flutter run
 ```
 ## 3. Aplicația de pe server
 În această secțiune detaliem cum trebuie instalat și configurat programul de pe server.
+### 3.1 Dependințe
+ Înainte de a începe trebuie să vă asigurați că aveți instalate următoarele programe:
+ * **Python 3.x:** (e.g., Python 3.9 sau chiar o versiune mai recentă).
+    * [Descarcă Python](https://www.python.org/downloads/)
+* 
