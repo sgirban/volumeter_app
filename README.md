@@ -53,4 +53,9 @@ flutter run
  Înainte de a începe trebuie să vă asigurați că aveți instalate următoarele programe:
  * **Python 3.x:** (e.g., Python 3.9 sau chiar o versiune mai recentă).
     * [Descarcă Python](https://www.python.org/downloads/)
-* 
+* **Colmap:** Un pipeline care are implementatți algoritmi precum Structure-from-Motion (SfM) și Multi-View Stereo (MVS).  
+    * [Descărcați COLMAP](https://colmap.github.io/install.html) 
+    * Pentru Colmap este foarte important să vă asigurați că executabilul este accesibil via PATH.
+  **Blender:** Blender este util atât pentru viuzalizarea datelor, dar și pentru a calcula mult mai precis volumul. Aplicația de server folosește câteva scripturi blender.
+  * [Descarcă Blender](https://www.blender.org/download/)
+  
