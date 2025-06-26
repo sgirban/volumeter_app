@@ -72,6 +72,15 @@ class _ProcessingPageState extends ConsumerState<ProcessingPage> {
         repeat: true,
       );
     }
+    if (status.currentStage.toString() == 'FUSING' && status.progress < 1.0) {
+      return Lottie.asset(
+        'assets/lotties/Animation-fusing.json',
+        height: 200,
+        fit: BoxFit.fill,
+        repeat: true,
+      );
+    }
+
     return Lottie.asset(
       'assets/lotties/Animation-done_uploading.json',
       width: 200,
