@@ -10,6 +10,7 @@ trimise către un server backend pentru a putea fi procesate.
    * 2.2 [Obținerea codului](#22-Obținerea-codului)
    * 2.3 [Configurarea aplicației](#23-Configurarea-aplicației)
    * 2.4 [Lansarea și rularea aplicației](#24-Lansarea-și-rularea-aplicației)
+3. [Aplicația de pe server](#3-Aplicația-de-pe-server)
 ## 1. Prezentarea generală a sistemului
 Sistemul oferă o serie de etape ce pot fi urmate pentru a estima volumul din imagile încărcate de utilizatori.
 * **Aplicația client (în Flutter):** Se ocupă cu gestionarea, editarea și organizarea imaginilor ce trebuiesc procesate, dar și
@@ -45,3 +46,5 @@ Pentru a complia și rula aplicația trebuie să folosiți comanda:
  ```bash
 flutter run
 ```
+## 3. Aplicația de pe server
+În această secțiune detaliem cum trebuie instalat și configurat programul de pe server.
