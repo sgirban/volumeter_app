@@ -1,12 +1,13 @@
-# volumeter
+# Volumeter. Sistem distribuit pentru estimarea volumui
+Acest repository conține codul Flutter pentru aplicația client. Sistemul 
+le permite utilizatorilor să captureze și să editeze imagini prin intermediul aplicației mobile, acestea urmând să fie 
+trimise către un server backend pentru a putea fi procesate.
 
+## Cuprins
+[Prezentarea sistemului](#1-Prezentarea-generală-a-sistemului)
+## 1. Prezentarea generală a sistemului
+## Primii pași
 
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
 
 - [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
 - [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
