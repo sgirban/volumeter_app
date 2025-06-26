@@ -71,6 +71,7 @@ git clone https://github.com/sgirban/volumeter_server.git
 python3 -m venv venv
 ```
 Mediul nou creat trebuie activat. Acest pas se realizează diferit în funcție de sistemul de operare:
+
 Pe Linux\MacOS:
 ```bash
 source venv/bin/activate
@@ -86,8 +87,14 @@ pip install grpcio, numpy, scipy, pycolmap,Pillow, torch , torchvision, logger, 
 ###  3.4 Pornirea aplicației server
 În interiorul directorul server se regăsește un fișier makefile. Acolo sunt definite target-uri pentru principalele operații:
 * Pentru pornirea serverului în **foreground**:
-  ```bash
+```bash
  make run
 ```
-
 * Pentru pornirea serverului în **background**:
+```bash
+ make start
+```
+* Pentru oprirea serverului (a procesului ) se folosește:
+```bash
+ make stop
+```
